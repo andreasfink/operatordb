@@ -1,6 +1,5 @@
 # Operatordb #
 
-
 This is a very simple library to get from IMSI to mobile operator information. The source is generated out of a database of mobile operators and is organized in a digit tree for high speed translation.
 
 There is only one C function *get_operator_from_imsi* doing all the work.
