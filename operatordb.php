@@ -2,7 +2,7 @@
 //  operatordb.php
 //  operatordb
 //
-//  Created by afink on 2019-01-24 21:50:18 UTC.
+//  Created by afink on 2020-03-06 21:12:30 UTC.
 //
 
 
@@ -30,6 +30,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '2':
                         {
+                            $country = "GRC";
+                            $organisation = "GRC";
+                            $network = "GRC";
+                            $abbreviated_name = "GRC";
+                            $mcc = "202";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "202.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -101,8 +110,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '3':
+                        {
+                            $country = "KNA";
+                            $organisation = "KNA";
+                            $network = "KNA";
+                            $abbreviated_name = "KNA";
+                            $mcc = "203";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "203.XX";
+                            break;
+                        }
                         case '4':
                         {
+                            $country = "NLD";
+                            $organisation = "NLD";
+                            $network = "NLD";
+                            $abbreviated_name = "NLD";
+                            $mcc = "204";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "204.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -189,6 +220,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "BEL";
+                            $organisation = "BEL";
+                            $network = "BEL";
+                            $abbreviated_name = "BEL";
+                            $mcc = "206";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "206.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -206,19 +246,6 @@ function get_operator_from_imsi($imsi)
                                             $sim = "893200";
                                             $last_update = "2016-03-02";
                                             $operator_code = "206.01";
-                                            break;
-                                        }
-                                        case '5':
-                                        {
-                                            $country = "BEL";
-                                            $organisation = "Telenet";
-                                            $network = "Telenet";
-                                            $abbreviated_name = "Telenet";
-                                            $mcc = "206";
-                                            $mnc = "05";
-                                            $sim = "";
-                                            $last_update = "2018.-12-27";
-                                            $operator_code = "206.05";
                                             break;
                                         }
                                     }
@@ -269,6 +296,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "FRA";
+                            $organisation = "FRA";
+                            $network = "FRA";
+                            $abbreviated_name = "FRA";
+                            $mcc = "208";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "208.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -393,19 +429,6 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "208.20";
                                             break;
                                         }
-                                        case '5':
-                                        {
-                                            $country = "FRA";
-                                            $organisation = "LycaMobile";
-                                            $network = "LycaMobile";
-                                            $abbreviated_name = "LycaMobile";
-                                            $mcc = "208";
-                                            $mnc = "25";
-                                            $sim = "";
-                                            $last_update = "2018-12-27";
-                                            $operator_code = "208.25";
-                                            break;
-                                        }
                                     }
                                     break;
                                 }
@@ -441,6 +464,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '2':
                         {
+                            $country = "MCO";
+                            $organisation = "MCO";
+                            $network = "MCO";
+                            $abbreviated_name = "MCO";
+                            $mcc = "212";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "212.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -488,6 +520,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "AND";
+                            $organisation = "AND";
+                            $network = "AND";
+                            $abbreviated_name = "AND";
+                            $mcc = "213";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "213.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -515,6 +556,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "ESP";
+                            $organisation = "ESP";
+                            $network = "ESP";
+                            $abbreviated_name = "ESP";
+                            $mcc = "214";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "214.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -560,32 +610,6 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "214.04";
                                             break;
                                         }
-                                        case '5':
-                                        {
-                                            $country = "ESP";
-                                            $organisation = "Movistar";
-                                            $network = "Movistar";
-                                            $abbreviated_name = "Movistar";
-                                            $mcc = "214";
-                                            $mnc = "05";
-                                            $sim = "";
-                                            $last_update = "2018-12-27";
-                                            $operator_code = "214.05";
-                                            break;
-                                        }
-                                        case '6':
-                                        {
-                                            $country = "ESP";
-                                            $organisation = "Vodafone";
-                                            $network = "Vodafone";
-                                            $abbreviated_name = "Vodafone";
-                                            $mcc = "214";
-                                            $mnc = "06";
-                                            $sim = "";
-                                            $last_update = "2018-12-27";
-                                            $operator_code = "214.06";
-                                            break;
-                                        }
                                         case '7':
                                         {
                                             $country = "ESP";
@@ -607,6 +631,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "HUN";
+                            $organisation = "HUN";
+                            $network = "HUN";
+                            $abbreviated_name = "HUN";
+                            $mcc = "216";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "216.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -674,6 +707,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "BIH";
+                            $organisation = "BIH";
+                            $network = "BIH";
+                            $abbreviated_name = "BIH";
+                            $mcc = "218";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "218.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -734,6 +776,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "HRV";
+                            $organisation = "HRV";
+                            $network = "HRV";
+                            $abbreviated_name = "HRV";
+                            $mcc = "219";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "219.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -801,6 +852,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "SRB";
+                            $organisation = "SRB";
+                            $network = "SRB";
+                            $abbreviated_name = "SRB";
+                            $mcc = "220";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "220.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -852,8 +912,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '1':
+                        {
+                            $country = "UNK";
+                            $organisation = "UNK";
+                            $network = "UNK";
+                            $abbreviated_name = "UNK";
+                            $mcc = "221";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "221.XX";
+                            break;
+                        }
                         case '2':
                         {
+                            $country = "ITA";
+                            $organisation = "ITA";
+                            $network = "ITA";
+                            $abbreviated_name = "ITA";
+                            $mcc = "222";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "222.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -891,26 +973,6 @@ function get_operator_from_imsi($imsi)
                                             $sim = "893910";
                                             $last_update = "2016-03-03";
                                             $operator_code = "222.10";
-                                            break;
-                                        }
-                                    }
-                                    break;
-                                }
-                                case '5':
-                                {
-                                    switch($imsi[4])
-                                    {
-                                        case '0':
-                                        {
-                                            $country = "ITA";
-                                            $organisation = "Iliad";
-                                            $network = "Iliad";
-                                            $abbreviated_name = "Iliad";
-                                            $mcc = "222";
-                                            $mnc = "50";
-                                            $sim = "";
-                                            $last_update = "2018-12-27";
-                                            $operator_code = "222.50";
                                             break;
                                         }
                                     }
@@ -959,8 +1021,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '5':
+                        {
+                            $country = "VAT";
+                            $organisation = "VAT";
+                            $network = "VAT";
+                            $abbreviated_name = "VAT";
+                            $mcc = "225";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "225.XX";
+                            break;
+                        }
                         case '6':
                         {
+                            $country = "ROU";
+                            $organisation = "ROU";
+                            $network = "ROU";
+                            $abbreviated_name = "ROU";
+                            $mcc = "226";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "226.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -1034,6 +1118,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "CHE";
+                            $organisation = "CHE";
+                            $network = "CHE";
+                            $abbreviated_name = "CHE";
+                            $mcc = "228";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "228.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -1094,6 +1187,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "CZE";
+                            $organisation = "CZE";
+                            $network = "CZE";
+                            $abbreviated_name = "CZE";
+                            $mcc = "230";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "230.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -1147,6 +1249,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "SVK";
+                            $organisation = "SVK";
+                            $network = "SVK";
+                            $abbreviated_name = "SVK";
+                            $mcc = "231";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "231.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -1213,6 +1324,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "AUT";
+                            $organisation = "AUT";
+                            $network = "AUT";
+                            $abbreviated_name = "AUT";
+                            $mcc = "232";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "232.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -1299,12 +1419,34 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "GBR";
+                            $organisation = "GBR";
+                            $network = "GBR";
+                            $abbreviated_name = "GBR";
+                            $mcc = "234";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "234.XX";
                             switch($imsi[3])
                             {
                                 case '0':
                                 {
                                     switch($imsi[4])
                                     {
+                                        case '1':
+                                        {
+                                            $country = "GBR";
+                                            $organisation = "Vectone Mobile	";
+                                            $network = "Vectone Mobile	";
+                                            $abbreviated_name = "Vectone";
+                                            $mcc = "234";
+                                            $mnc = "01";
+                                            $sim = "";
+                                            $last_update = "";
+                                            $operator_code = "234.01";
+                                            break;
+                                        }
                                         case '3':
                                         {
                                             $country = "GBR";
@@ -1397,32 +1539,6 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "234.20";
                                             break;
                                         }
-                                        case '5':
-                                        {
-                                            $country = "GBR";
-                                            $organisation = "Truphone";
-                                            $network = "Truphone";
-                                            $abbreviated_name = "Truphone";
-                                            $mcc = "234";
-                                            $mnc = "25";
-                                            $sim = "";
-                                            $last_update = "2048-12-27";
-                                            $operator_code = "234.25";
-                                            break;
-                                        }
-                                        case '6':
-                                        {
-                                            $country = "GBR";
-                                            $organisation = "LycaMobile";
-                                            $network = "LycaMobile";
-                                            $abbreviated_name = "LycaMobile";
-                                            $mcc = "234";
-                                            $mnc = "26";
-                                            $sim = "";
-                                            $last_update = "2048-12-27";
-                                            $operator_code = "234.26";
-                                            break;
-                                        }
                                         case '8':
                                         {
                                             $country = "GBR";
@@ -1467,19 +1583,6 @@ function get_operator_from_imsi($imsi)
                                             $sim = "894412";
                                             $last_update = "2016-03-16";
                                             $operator_code = "234.33";
-                                            break;
-                                        }
-                                        case '8':
-                                        {
-                                            $country = "GBR";
-                                            $organisation = "VirginMobile";
-                                            $network = "VirginMobile";
-                                            $abbreviated_name = "VirginMobile";
-                                            $mcc = "234";
-                                            $mnc = "38";
-                                            $sim = "";
-                                            $last_update = "2048-12-27";
-                                            $operator_code = "234.38";
                                             break;
                                         }
                                     }
@@ -1534,8 +1637,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '5':
+                        {
+                            $country = "GBR";
+                            $organisation = "GBR";
+                            $network = "GBR";
+                            $abbreviated_name = "GBR";
+                            $mcc = "235";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "235.XX";
+                            break;
+                        }
                         case '8':
                         {
+                            $country = "DNK";
+                            $organisation = "DNK";
+                            $network = "DNK";
+                            $abbreviated_name = "DNK";
+                            $mcc = "238";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "238.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -1656,6 +1781,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "SWE";
+                            $organisation = "SWE";
+                            $network = "SWE";
+                            $abbreviated_name = "SWE";
+                            $mcc = "240";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "240.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -1768,6 +1902,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "NOR";
+                            $organisation = "NOR";
+                            $network = "NOR";
+                            $abbreviated_name = "NOR";
+                            $mcc = "242";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "242.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -1826,8 +1969,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '3':
+                        {
+                            $country = "MNP";
+                            $organisation = "MNP";
+                            $network = "MNP";
+                            $abbreviated_name = "MNP";
+                            $mcc = "243";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "243.XX";
+                            break;
+                        }
                         case '4':
                         {
+                            $country = "FIN";
+                            $organisation = "FIN";
+                            $network = "FIN";
+                            $abbreviated_name = "FIN";
+                            $mcc = "244";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "244.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -1961,6 +2126,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "LTU";
+                            $organisation = "LTU";
+                            $network = "LTU";
+                            $abbreviated_name = "LTU";
+                            $mcc = "246";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "246.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2014,6 +2188,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "LVA";
+                            $organisation = "LVA";
+                            $network = "LVA";
+                            $abbreviated_name = "LVA";
+                            $mcc = "247";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "247.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2067,6 +2250,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "EST";
+                            $organisation = "EST";
+                            $network = "EST";
+                            $abbreviated_name = "EST";
+                            $mcc = "248";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "248.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2127,6 +2319,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "RUS";
+                            $organisation = "RUS";
+                            $network = "RUS";
+                            $abbreviated_name = "RUS";
+                            $mcc = "250";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "250.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2266,6 +2467,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "UKR";
+                            $organisation = "UKR";
+                            $network = "UKR";
+                            $abbreviated_name = "UKR";
+                            $mcc = "255";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "255.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2345,6 +2555,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "BLR";
+                            $organisation = "BLR";
+                            $network = "BLR";
+                            $abbreviated_name = "BLR";
+                            $mcc = "257";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "257.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2398,6 +2617,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "MDA";
+                            $organisation = "MDA";
+                            $network = "MDA";
+                            $abbreviated_name = "MDA";
+                            $mcc = "259";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "259.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2458,6 +2686,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "POL";
+                            $organisation = "POL";
+                            $network = "POL";
+                            $abbreviated_name = "POL";
+                            $mcc = "260";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "260.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2524,6 +2761,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "DEU";
+                            $organisation = "DEU";
+                            $network = "DEU";
+                            $abbreviated_name = "DEU";
+                            $mcc = "262";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "262.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2603,6 +2849,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "GIB";
+                            $organisation = "GIB";
+                            $network = "GIB";
+                            $abbreviated_name = "GIB";
+                            $mcc = "266";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "266.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2630,6 +2885,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "PRT";
+                            $organisation = "PRT";
+                            $network = "PRT";
+                            $abbreviated_name = "PRT";
+                            $mcc = "268";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "268.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2690,6 +2954,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "LUX";
+                            $organisation = "LUX";
+                            $network = "LUX";
+                            $abbreviated_name = "LUX";
+                            $mcc = "270";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "270.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2757,6 +3030,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "IRL";
+                            $organisation = "IRL";
+                            $network = "IRL";
+                            $abbreviated_name = "IRL";
+                            $mcc = "272";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "272.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2823,6 +3105,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "ISL";
+                            $organisation = "ISL";
+                            $network = "ISL";
+                            $abbreviated_name = "ISL";
+                            $mcc = "274";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "274.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2922,6 +3213,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "ALB";
+                            $organisation = "ALB";
+                            $network = "ALB";
+                            $abbreviated_name = "ALB";
+                            $mcc = "276";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "276.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -2988,6 +3288,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "MLT";
+                            $organisation = "MLT";
+                            $network = "MLT";
+                            $abbreviated_name = "MLT";
+                            $mcc = "278";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "278.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3062,6 +3371,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "CYP";
+                            $organisation = "CYP";
+                            $network = "CYP";
+                            $abbreviated_name = "CYP";
+                            $mcc = "280";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "280.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3129,6 +3447,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "GEO";
+                            $organisation = "GEO";
+                            $network = "GEO";
+                            $abbreviated_name = "GEO";
+                            $mcc = "282";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "282.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3182,6 +3509,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "ARM";
+                            $organisation = "ARM";
+                            $network = "ARM";
+                            $abbreviated_name = "ARM";
+                            $mcc = "283";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "283.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3242,6 +3578,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "BGR";
+                            $organisation = "BGR";
+                            $network = "BGR";
+                            $abbreviated_name = "BGR";
+                            $mcc = "284";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "284.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3295,6 +3640,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "TUR";
+                            $organisation = "TUR";
+                            $network = "TUR";
+                            $abbreviated_name = "TUR";
+                            $mcc = "286";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "286.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3348,6 +3702,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "FRO";
+                            $organisation = "FRO";
+                            $network = "FRO";
+                            $abbreviated_name = "FRO";
+                            $mcc = "288";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "288.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3395,6 +3758,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "GRL";
+                            $organisation = "GRL";
+                            $network = "GRL";
+                            $abbreviated_name = "GRL";
+                            $mcc = "290";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "290.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3422,6 +3794,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "SMR";
+                            $organisation = "SMR";
+                            $network = "SMR";
+                            $abbreviated_name = "SMR";
+                            $mcc = "292";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "292.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3449,6 +3830,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "SVN";
+                            $organisation = "SVN";
+                            $network = "SVN";
+                            $abbreviated_name = "SVN";
+                            $mcc = "293";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "293.XX";
                             switch($imsi[3])
                             {
                                 case '4':
@@ -3529,6 +3919,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "MKD";
+                            $organisation = "MKD";
+                            $network = "MKD";
+                            $abbreviated_name = "MKD";
+                            $mcc = "294";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "294.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3569,6 +3968,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "LIE";
+                            $organisation = "LIE";
+                            $network = "LIE";
+                            $abbreviated_name = "LIE";
+                            $mcc = "295";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "295.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3622,6 +4030,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "MNE";
+                            $organisation = "MNE";
+                            $network = "MNE";
+                            $abbreviated_name = "MNE";
+                            $mcc = "297";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "297.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -3689,6 +4106,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '2':
                         {
+                            $country = "CAN";
+                            $organisation = "CAN";
+                            $network = "CAN";
+                            $abbreviated_name = "CAN";
+                            $mcc = "302";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "302.XX";
                             switch($imsi[3])
                             {
                                 case '2':
@@ -4032,6 +4458,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "SPM";
+                            $organisation = "SPM";
+                            $network = "SPM";
+                            $abbreviated_name = "SPM";
+                            $mcc = "308";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "308.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -4066,6 +4501,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "USA";
+                            $organisation = "USA";
+                            $network = "USA";
+                            $abbreviated_name = "USA";
+                            $mcc = "310";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "310.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -5049,6 +5493,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "USA";
+                            $organisation = "USA";
+                            $network = "USA";
+                            $abbreviated_name = "USA";
+                            $mcc = "311";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "311.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -5459,6 +5912,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "USA";
+                            $organisation = "USA";
+                            $network = "USA";
+                            $abbreviated_name = "USA";
+                            $mcc = "312";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "312.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -5666,6 +6128,32 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '4':
+                        {
+                            $country = "USA";
+                            $organisation = "USA";
+                            $network = "USA";
+                            $abbreviated_name = "USA";
+                            $mcc = "314";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "314.XX";
+                            break;
+                        }
+                        case '6':
+                        {
+                            $country = "USA";
+                            $organisation = "USA";
+                            $network = "USA";
+                            $abbreviated_name = "USA";
+                            $mcc = "316";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "316.XX";
+                            break;
+                        }
                     }
                     break;
                 }
@@ -5675,6 +6163,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "PRI";
+                            $organisation = "PRI";
+                            $network = "PRI";
+                            $abbreviated_name = "PRI";
+                            $mcc = "330";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "330.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -5727,8 +6224,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '2':
+                        {
+                            $country = "VIR";
+                            $organisation = "VIR";
+                            $network = "VIR";
+                            $abbreviated_name = "VIR";
+                            $mcc = "332";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "332.XX";
+                            break;
+                        }
                         case '4':
                         {
+                            $country = "MEX";
+                            $organisation = "MEX";
+                            $network = "MEX";
+                            $abbreviated_name = "MEX";
+                            $mcc = "334";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "334.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -5823,6 +6342,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "HTI";
+                            $organisation = "HTI";
+                            $network = "HTI";
+                            $abbreviated_name = "HTI";
+                            $mcc = "338";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "338.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -5882,6 +6410,19 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '9':
+                        {
+                            $country = "TCA";
+                            $organisation = "TCA";
+                            $network = "TCA";
+                            $abbreviated_name = "TCA";
+                            $mcc = "339";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "339.XX";
+                            break;
+                        }
                     }
                     break;
                 }
@@ -5891,6 +6432,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "GLP";
+                            $organisation = "GLP";
+                            $network = "GLP";
+                            $abbreviated_name = "GLP";
+                            $mcc = "340";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "340.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -5949,8 +6499,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '1':
+                        {
+                            $country = "MTQ";
+                            $organisation = "MTQ";
+                            $network = "MTQ";
+                            $abbreviated_name = "MTQ";
+                            $mcc = "341";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "341.XX";
+                            break;
+                        }
                         case '2':
                         {
+                            $country = "BRB";
+                            $organisation = "BRB";
+                            $network = "BRB";
+                            $abbreviated_name = "BRB";
+                            $mcc = "342";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "342.XX";
                             switch($imsi[3])
                             {
                                 case '6':
@@ -6012,6 +6584,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "ATG";
+                            $organisation = "ATG";
+                            $network = "ATG";
+                            $abbreviated_name = "ATG";
+                            $mcc = "344";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "344.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6093,6 +6674,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "CYM";
+                            $organisation = "CYM";
+                            $network = "CYM";
+                            $abbreviated_name = "CYM";
+                            $mcc = "346";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "346.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -6127,6 +6717,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "VGB";
+                            $organisation = "VGB";
+                            $network = "VGB";
+                            $abbreviated_name = "VGB";
+                            $mcc = "348";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "348.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -6195,6 +6794,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "BMU";
+                            $organisation = "BMU";
+                            $network = "BMU";
+                            $abbreviated_name = "BMU";
+                            $mcc = "350";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "350.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6249,6 +6857,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "GRD";
+                            $organisation = "GRD";
+                            $network = "GRD";
+                            $abbreviated_name = "GRD";
+                            $mcc = "352";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "352.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6310,6 +6927,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "MSR";
+                            $organisation = "MSR";
+                            $network = "MSR";
+                            $abbreviated_name = "MSR";
+                            $mcc = "354";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "354.XX";
                             switch($imsi[3])
                             {
                                 case '8':
@@ -6344,6 +6970,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "KNA";
+                            $organisation = "KNA";
+                            $network = "KNA";
+                            $abbreviated_name = "KNA";
+                            $mcc = "356";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "356.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -6378,6 +7013,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "LCA";
+                            $organisation = "LCA";
+                            $network = "LCA";
+                            $abbreviated_name = "LCA";
+                            $mcc = "358";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "358.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6446,6 +7090,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "VCT";
+                            $organisation = "VCT";
+                            $network = "VCT";
+                            $abbreviated_name = "VCT";
+                            $mcc = "360";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "360.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6507,6 +7160,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "ANT";
+                            $organisation = "ANT";
+                            $network = "ANT";
+                            $abbreviated_name = "ANT";
+                            $mcc = "362";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "362.XX";
                             switch($imsi[3])
                             {
                                 case '5':
@@ -6594,6 +7256,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "ABW";
+                            $organisation = "ABW";
+                            $network = "ABW";
+                            $abbreviated_name = "ABW";
+                            $mcc = "363";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "363.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6634,6 +7305,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "BHS";
+                            $organisation = "BHS";
+                            $network = "BHS";
+                            $abbreviated_name = "BHS";
+                            $mcc = "364";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "364.XX";
                             switch($imsi[3])
                             {
                                 case '3':
@@ -6681,6 +7361,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "AIA";
+                            $organisation = "AIA";
+                            $network = "AIA";
+                            $abbreviated_name = "AIA";
+                            $mcc = "365";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "365.XX";
                             switch($imsi[3])
                             {
                                 case '8':
@@ -6715,6 +7404,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "DMA";
+                            $organisation = "DMA";
+                            $network = "DMA";
+                            $abbreviated_name = "DMA";
+                            $mcc = "366";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "366.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6776,6 +7474,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "CUB";
+                            $organisation = "CUB";
+                            $network = "CUB";
+                            $abbreviated_name = "CUB";
+                            $mcc = "368";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "368.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6810,6 +7517,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "DOM";
+                            $organisation = "DOM";
+                            $network = "DOM";
+                            $abbreviated_name = "DOM";
+                            $mcc = "370";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "370.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6863,6 +7579,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "HTI";
+                            $organisation = "HTI";
+                            $network = "HTI";
+                            $abbreviated_name = "HTI";
+                            $mcc = "372";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "372.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -6890,6 +7615,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "TTO";
+                            $organisation = "TTO";
+                            $network = "TTO";
+                            $abbreviated_name = "TTO";
+                            $mcc = "374";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "374.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -6937,6 +7671,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "TCA";
+                            $organisation = "TCA";
+                            $network = "TCA";
+                            $abbreviated_name = "TCA";
+                            $mcc = "376";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "376.XX";
                             switch($imsi[3])
                             {
                                 case '3':
@@ -6985,6 +7728,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "AZE";
+                            $organisation = "AZE";
+                            $network = "AZE";
+                            $abbreviated_name = "AZE";
+                            $mcc = "400";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "400.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -7038,6 +7790,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "KAZ";
+                            $organisation = "KAZ";
+                            $network = "KAZ";
+                            $abbreviated_name = "KAZ";
+                            $mcc = "401";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "401.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -7111,6 +7872,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "BTN";
+                            $organisation = "BTN";
+                            $network = "BTN";
+                            $abbreviated_name = "BTN";
+                            $mcc = "402";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "402.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -7158,6 +7928,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "IND";
+                            $organisation = "IND";
+                            $network = "IND";
+                            $abbreviated_name = "IND";
+                            $mcc = "404";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "404.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -7192,6 +7971,15 @@ function get_operator_from_imsi($imsi)
                                         }
                                         case '3':
                                         {
+                                            $country = "IND";
+                                            $organisation = "Bharti Airtel Limited";
+                                            $network = "airtel";
+                                            $abbreviated_name = "airtel";
+                                            $mcc = "404";
+                                            $mnc = "03";
+                                            $sim = "899103";
+                                            $last_update = "2016-05-25";
+                                            $operator_code = "404.03";
                                             switch($imsi[5])
                                             {
                                                 case '0':
@@ -8230,6 +9018,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "IND";
+                            $organisation = "IND";
+                            $network = "IND";
+                            $abbreviated_name = "IND";
+                            $mcc = "405";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "405.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -9845,6 +10642,19 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '6':
+                        {
+                            $country = "IND";
+                            $organisation = "IND";
+                            $network = "IND";
+                            $abbreviated_name = "IND";
+                            $mcc = "406";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "406.XX";
+                            break;
+                        }
                     }
                     break;
                 }
@@ -9854,6 +10664,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "PAK";
+                            $organisation = "PAK";
+                            $network = "PAK";
+                            $abbreviated_name = "PAK";
+                            $mcc = "410";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "410.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -9933,6 +10752,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "AFG";
+                            $organisation = "AFG";
+                            $network = "AFG";
+                            $abbreviated_name = "AFG";
+                            $mcc = "412";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "412.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10020,6 +10848,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "LKA";
+                            $organisation = "LKA";
+                            $network = "LKA";
+                            $abbreviated_name = "LKA";
+                            $mcc = "413";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "413.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10099,6 +10936,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "MMR";
+                            $organisation = "MMR";
+                            $network = "MMR";
+                            $abbreviated_name = "MMR";
+                            $mcc = "414";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "414.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10152,6 +10998,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "LBN";
+                            $organisation = "LBN";
+                            $network = "LBN";
+                            $abbreviated_name = "LBN";
+                            $mcc = "415";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "415.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10205,6 +11060,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "JOR";
+                            $organisation = "JOR";
+                            $network = "JOR";
+                            $abbreviated_name = "JOR";
+                            $mcc = "416";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "416.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10265,6 +11129,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "SYR";
+                            $organisation = "SYR";
+                            $network = "SYR";
+                            $abbreviated_name = "SYR";
+                            $mcc = "417";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "417.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10305,6 +11178,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "IRQ";
+                            $organisation = "IRQ";
+                            $network = "IRQ";
+                            $abbreviated_name = "IRQ";
+                            $mcc = "418";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "418.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10392,6 +11274,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "KWT";
+                            $organisation = "KWT";
+                            $network = "KWT";
+                            $abbreviated_name = "KWT";
+                            $mcc = "419";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "419.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10452,6 +11343,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "SAU";
+                            $organisation = "SAU";
+                            $network = "SAU";
+                            $abbreviated_name = "SAU";
+                            $mcc = "420";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "420.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10505,6 +11405,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "YEM";
+                            $organisation = "YEM";
+                            $network = "YEM";
+                            $abbreviated_name = "YEM";
+                            $mcc = "421";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "421.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10537,19 +11446,6 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "421.02";
                                             break;
                                         }
-                                        case '3':
-                                        {
-                                            $country = "YEM";
-                                            $organisation = "Yemen Mobile";
-                                            $network = "Yemen Mobile";
-                                            $abbreviated_name = "Yemen Mobile";
-                                            $mcc = "421";
-                                            $mnc = "03";
-                                            $sim = "";
-                                            $last_update = "2018-12-27";
-                                            $operator_code = "421.03";
-                                            break;
-                                        }
                                         case '4':
                                         {
                                             $country = "YEM";
@@ -10571,6 +11467,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "OMN";
+                            $organisation = "OMN";
+                            $network = "OMN";
+                            $abbreviated_name = "OMN";
+                            $mcc = "422";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "422.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10609,8 +11514,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '3':
+                        {
+                            $country = "PSE";
+                            $organisation = "PSE";
+                            $network = "PSE";
+                            $abbreviated_name = "PSE";
+                            $mcc = "423";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "423.XX";
+                            break;
+                        }
                         case '4':
                         {
+                            $country = "ARE";
+                            $organisation = "ARE";
+                            $network = "ARE";
+                            $abbreviated_name = "ARE";
+                            $mcc = "424";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "424.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10651,6 +11578,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "ISR";
+                            $organisation = "ISR";
+                            $network = "ISR";
+                            $abbreviated_name = "ISR";
+                            $mcc = "425";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "425.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10763,6 +11699,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "BHR";
+                            $organisation = "BHR";
+                            $network = "BHR";
+                            $abbreviated_name = "BHR";
+                            $mcc = "426";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "426.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10816,6 +11761,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "QAT";
+                            $organisation = "QAT";
+                            $network = "QAT";
+                            $abbreviated_name = "QAT";
+                            $mcc = "427";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "427.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10856,6 +11810,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "MNG";
+                            $organisation = "MNG";
+                            $network = "MNG";
+                            $abbreviated_name = "MNG";
+                            $mcc = "428";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "428.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10923,6 +11886,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "NPL";
+                            $organisation = "NPL";
+                            $network = "NPL";
+                            $abbreviated_name = "NPL";
+                            $mcc = "429";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "429.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -10957,6 +11929,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '2':
                         {
+                            $country = "IRN";
+                            $organisation = "IRN";
+                            $network = "IRN";
+                            $abbreviated_name = "IRN";
+                            $mcc = "432";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "432.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -11037,6 +12018,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "UZB";
+                            $organisation = "UZB";
+                            $network = "UZB";
+                            $abbreviated_name = "UZB";
+                            $mcc = "434";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "434.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11103,6 +12093,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "TJK";
+                            $organisation = "TJK";
+                            $network = "TJK";
+                            $abbreviated_name = "TJK";
+                            $mcc = "436";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "436.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11182,6 +12181,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "KGZ";
+                            $organisation = "KGZ";
+                            $network = "KGZ";
+                            $abbreviated_name = "KGZ";
+                            $mcc = "437";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "437.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11222,6 +12230,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "TKM";
+                            $organisation = "TKM";
+                            $network = "TKM";
+                            $abbreviated_name = "TKM";
+                            $mcc = "438";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "438.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11269,6 +12286,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "JPN";
+                            $organisation = "JPN";
+                            $network = "JPN";
+                            $abbreviated_name = "JPN";
+                            $mcc = "440";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "440.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11367,6 +12393,19 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '1':
+                        {
+                            $country = "JPN";
+                            $organisation = "JPN";
+                            $network = "JPN";
+                            $abbreviated_name = "JPN";
+                            $mcc = "441";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "441.XX";
+                            break;
+                        }
                     }
                     break;
                 }
@@ -11376,6 +12415,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "KOR";
+                            $organisation = "KOR";
+                            $network = "KOR";
+                            $abbreviated_name = "KOR";
+                            $mcc = "450";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "450.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11429,6 +12477,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "VNM";
+                            $organisation = "VNM";
+                            $network = "VNM";
+                            $abbreviated_name = "VNM";
+                            $mcc = "452";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "452.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11508,6 +12565,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "HKG";
+                            $organisation = "HKG";
+                            $network = "HKG";
+                            $abbreviated_name = "HKG";
+                            $mcc = "454";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "454.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11718,6 +12784,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "MAC";
+                            $organisation = "MAC";
+                            $network = "MAC";
+                            $abbreviated_name = "MAC";
+                            $mcc = "455";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "455.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11784,6 +12859,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "KHM";
+                            $organisation = "KHM";
+                            $network = "KHM";
+                            $abbreviated_name = "KHM";
+                            $mcc = "456";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "456.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11883,6 +12967,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "LAO";
+                            $organisation = "LAO";
+                            $network = "LAO";
+                            $abbreviated_name = "LAO";
+                            $mcc = "457";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "457.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -11956,6 +13049,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "CHN";
+                            $organisation = "CHN";
+                            $network = "CHN";
+                            $abbreviated_name = "CHN";
+                            $mcc = "460";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "460.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -12094,6 +13196,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "TWN";
+                            $organisation = "TWN";
+                            $network = "TWN";
+                            $abbreviated_name = "TWN";
+                            $mcc = "466";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "466.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -12226,6 +13337,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "PRK";
+                            $organisation = "PRK";
+                            $network = "PRK";
+                            $abbreviated_name = "PRK";
+                            $mcc = "467";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "467.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -12260,23 +13380,39 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "BGD";
+                            $organisation = "BGD";
+                            $network = "BGD";
+                            $abbreviated_name = "BGD";
+                            $mcc = "470";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "470.XX";
                             switch($imsi[3])
                             {
                                 case '0':
                                 {
                                     switch($imsi[4])
                                     {
-                                        case '1':
+                                        case '0':
                                         {
-                                            $country = "BGD";
-                                            $organisation = "Grameenphone Ltd";
-                                            $network = "grameenphone";
-                                            $abbreviated_name = "Grameen";
-                                            $mcc = "470";
-                                            $mnc = "01";
-                                            $sim = "898801";
-                                            $last_update = "2016-03-02";
-                                            $operator_code = "470.01";
+                                            switch($imsi[5])
+                                            {
+                                                case '1':
+                                                {
+                                                    $country = "BGD";
+                                                    $organisation = "Grameenphone Ltd";
+                                                    $network = "grameenphone";
+                                                    $abbreviated_name = "Grameen";
+                                                    $mcc = "470";
+                                                    $mnc = "001";
+                                                    $sim = "898801";
+                                                    $last_update = "2016-03-02";
+                                                    $operator_code = "470.001";
+                                                    break;
+                                                }
+                                            }
                                             break;
                                         }
                                         case '2':
@@ -12352,6 +13488,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "MDV";
+                            $organisation = "MDV";
+                            $network = "MDV";
+                            $abbreviated_name = "MDV";
+                            $mcc = "472";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "472.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -12406,6 +13551,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '2':
                         {
+                            $country = "MYS";
+                            $organisation = "MYS";
+                            $network = "MYS";
+                            $abbreviated_name = "MYS";
+                            $mcc = "502";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "502.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -12531,6 +13685,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "AUS";
+                            $organisation = "AUS";
+                            $network = "AUS";
+                            $abbreviated_name = "AUS";
+                            $mcc = "505";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "505.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -12657,6 +13820,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "IDN";
+                            $organisation = "IDN";
+                            $network = "IDN";
+                            $abbreviated_name = "IDN";
+                            $mcc = "510";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "510.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -12796,6 +13968,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "TLS";
+                            $organisation = "TLS";
+                            $network = "TLS";
+                            $abbreviated_name = "TLS";
+                            $mcc = "514";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "514.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -12836,6 +14017,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "PHL";
+                            $organisation = "PHL";
+                            $network = "PHL";
+                            $abbreviated_name = "PHL";
+                            $mcc = "515";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "515.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -12896,6 +14086,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "THA";
+                            $organisation = "THA";
+                            $network = "THA";
+                            $abbreviated_name = "THA";
+                            $mcc = "520";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "520.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13008,6 +14207,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "SGP";
+                            $organisation = "SGP";
+                            $network = "SGP";
+                            $abbreviated_name = "SGP";
+                            $mcc = "525";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "525.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13100,6 +14308,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "BRN";
+                            $organisation = "BRN";
+                            $network = "BRN";
+                            $abbreviated_name = "BRN";
+                            $mcc = "528";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "528.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13154,6 +14371,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "NZL";
+                            $organisation = "NZL";
+                            $network = "NZL";
+                            $abbreviated_name = "NZL";
+                            $mcc = "530";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "530.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13212,8 +14438,43 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '5':
+                        {
+                            $country = "GUM";
+                            $organisation = "GUM";
+                            $network = "GUM";
+                            $abbreviated_name = "GUM";
+                            $mcc = "535";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "535.XX";
+                            break;
+                        }
+                        case '6':
+                        {
+                            $country = "NRU";
+                            $organisation = "NRU";
+                            $network = "NRU";
+                            $abbreviated_name = "NRU";
+                            $mcc = "536";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "536.XX";
+                            break;
+                        }
                         case '7':
                         {
+                            $country = "PNG";
+                            $organisation = "PNG";
+                            $network = "PNG";
+                            $abbreviated_name = "PNG";
+                            $mcc = "537";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "537.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13267,6 +14528,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "TON";
+                            $organisation = "TON";
+                            $network = "TON";
+                            $abbreviated_name = "TON";
+                            $mcc = "539";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "539.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13321,6 +14591,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "SLB";
+                            $organisation = "SLB";
+                            $network = "SLB";
+                            $abbreviated_name = "SLB";
+                            $mcc = "540";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "540.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13348,6 +14627,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "VUT";
+                            $organisation = "VUT";
+                            $network = "VUT";
+                            $abbreviated_name = "VUT";
+                            $mcc = "541";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "541.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13388,6 +14676,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "FJI";
+                            $organisation = "FJI";
+                            $network = "FJI";
+                            $abbreviated_name = "FJI";
+                            $mcc = "542";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "542.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13428,6 +14725,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "WLF";
+                            $organisation = "WLF";
+                            $network = "WLF";
+                            $abbreviated_name = "WLF";
+                            $mcc = "543";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "543.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13455,6 +14761,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "ASM";
+                            $organisation = "ASM";
+                            $network = "ASM";
+                            $abbreviated_name = "ASM";
+                            $mcc = "544";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "544.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -13487,8 +14802,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '5':
+                        {
+                            $country = "KIR";
+                            $organisation = "KIR";
+                            $network = "KIR";
+                            $abbreviated_name = "KIR";
+                            $mcc = "545";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "545.XX";
+                            break;
+                        }
                         case '6':
                         {
+                            $country = "NCL";
+                            $organisation = "NCL";
+                            $network = "NCL";
+                            $abbreviated_name = "NCL";
+                            $mcc = "546";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "546.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13516,6 +14853,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "PYF";
+                            $organisation = "PYF";
+                            $network = "PYF";
+                            $abbreviated_name = "PYF";
+                            $mcc = "547";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "547.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -13563,6 +14909,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "COK";
+                            $organisation = "COK";
+                            $network = "COK";
+                            $abbreviated_name = "COK";
+                            $mcc = "548";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "548.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13590,6 +14945,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "WSM";
+                            $organisation = "WSM";
+                            $network = "WSM";
+                            $abbreviated_name = "WSM";
+                            $mcc = "549";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "549.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13644,6 +15008,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "FSM";
+                            $organisation = "FSM";
+                            $network = "FSM";
+                            $abbreviated_name = "FSM";
+                            $mcc = "550";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "550.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13671,6 +15044,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "MHL";
+                            $organisation = "MHL";
+                            $network = "MHL";
+                            $abbreviated_name = "MHL";
+                            $mcc = "551";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "551.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13698,6 +15080,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "PLW";
+                            $organisation = "PLW";
+                            $network = "PLW";
+                            $abbreviated_name = "PLW";
+                            $mcc = "552";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "552.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13725,6 +15116,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "TUV";
+                            $organisation = "TUV";
+                            $network = "TUV";
+                            $abbreviated_name = "TUV";
+                            $mcc = "553";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "553.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13777,6 +15177,19 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '5':
+                        {
+                            $country = "NIU";
+                            $organisation = "NIU";
+                            $network = "NIU";
+                            $abbreviated_name = "NIU";
+                            $mcc = "555";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "555.XX";
+                            break;
+                        }
                     }
                     break;
                 }
@@ -13793,6 +15206,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '2':
                         {
+                            $country = "EGY";
+                            $organisation = "EGY";
+                            $network = "EGY";
+                            $abbreviated_name = "EGY";
+                            $mcc = "602";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "602.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13846,6 +15268,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "DZA";
+                            $organisation = "DZA";
+                            $network = "DZA";
+                            $abbreviated_name = "DZA";
+                            $mcc = "603";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "603.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13899,6 +15330,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "MAR";
+                            $organisation = "MAR";
+                            $network = "MAR";
+                            $abbreviated_name = "MAR";
+                            $mcc = "604";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "604.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -13952,6 +15392,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "TUN";
+                            $organisation = "TUN";
+                            $network = "TUN";
+                            $abbreviated_name = "TUN";
+                            $mcc = "605";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "605.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14005,6 +15454,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "LBY";
+                            $organisation = "LBY";
+                            $network = "LBY";
+                            $abbreviated_name = "LBY";
+                            $mcc = "606";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "606.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14045,6 +15503,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "GMB";
+                            $organisation = "GMB";
+                            $network = "GMB";
+                            $abbreviated_name = "GMB";
+                            $mcc = "607";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "607.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14111,6 +15578,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "SEN";
+                            $organisation = "SEN";
+                            $network = "SEN";
+                            $abbreviated_name = "SEN";
+                            $mcc = "608";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "608.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14164,6 +15640,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "MRT";
+                            $organisation = "MRT";
+                            $network = "MRT";
+                            $abbreviated_name = "MRT";
+                            $mcc = "609";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "609.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14231,6 +15716,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "MLI";
+                            $organisation = "MLI";
+                            $network = "MLI";
+                            $abbreviated_name = "MLI";
+                            $mcc = "610";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "610.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14271,6 +15765,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "GIN";
+                            $organisation = "GIN";
+                            $network = "GIN";
+                            $abbreviated_name = "GIN";
+                            $mcc = "611";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "611.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14337,6 +15840,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "CIV";
+                            $organisation = "CIV";
+                            $network = "CIV";
+                            $abbreviated_name = "CIV";
+                            $mcc = "612";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "612.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14403,6 +15915,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "BFA";
+                            $organisation = "BFA";
+                            $network = "BFA";
+                            $abbreviated_name = "BFA";
+                            $mcc = "613";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "613.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14422,19 +15943,6 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "613.02";
                                             break;
                                         }
-                                        case '3':
-                                        {
-                                            $country = "BFA";
-                                            $organisation = "Telecel Faso SA";
-                                            $network = "Telecel";
-                                            $abbreviated_name = "Telecel";
-                                            $mcc = "613";
-                                            $mnc = "03";
-                                            $sim = "";
-                                            $last_update = "2018-12-27";
-                                            $operator_code = "613.03";
-                                            break;
-                                        }
                                     }
                                     break;
                                 }
@@ -14443,6 +15951,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "NER";
+                            $organisation = "NER";
+                            $network = "NER";
+                            $abbreviated_name = "NER";
+                            $mcc = "614";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "614.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14496,6 +16013,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "TGO";
+                            $organisation = "TGO";
+                            $network = "TGO";
+                            $abbreviated_name = "TGO";
+                            $mcc = "615";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "615.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14536,6 +16062,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "BEN";
+                            $organisation = "BEN";
+                            $network = "BEN";
+                            $abbreviated_name = "BEN";
+                            $mcc = "616";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "616.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14602,6 +16137,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "MUS";
+                            $organisation = "MUS";
+                            $network = "MUS";
+                            $abbreviated_name = "MUS";
+                            $mcc = "617";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "617.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14662,6 +16206,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "LBR";
+                            $organisation = "LBR";
+                            $network = "LBR";
+                            $abbreviated_name = "LBR";
+                            $mcc = "618";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "618.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14715,6 +16268,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "SLE";
+                            $organisation = "SLE";
+                            $network = "SLE";
+                            $abbreviated_name = "SLE";
+                            $mcc = "619";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "619.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14762,6 +16324,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "GHA";
+                            $organisation = "GHA";
+                            $network = "GHA";
+                            $abbreviated_name = "GHA";
+                            $mcc = "620";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "620.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14828,6 +16399,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "NGA";
+                            $organisation = "NGA";
+                            $network = "NGA";
+                            $abbreviated_name = "NGA";
+                            $mcc = "621";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "621.XX";
                             switch($imsi[3])
                             {
                                 case '2':
@@ -14935,6 +16515,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "TCD";
+                            $organisation = "TCD";
+                            $network = "TCD";
+                            $abbreviated_name = "TCD";
+                            $mcc = "622";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "622.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -14975,6 +16564,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "CAF";
+                            $organisation = "CAF";
+                            $network = "CAF";
+                            $abbreviated_name = "CAF";
+                            $mcc = "623";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "623.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15028,6 +16626,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "CMR";
+                            $organisation = "CMR";
+                            $network = "CMR";
+                            $abbreviated_name = "CMR";
+                            $mcc = "624";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "624.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15081,6 +16688,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "CPV";
+                            $organisation = "CPV";
+                            $network = "CPV";
+                            $abbreviated_name = "CPV";
+                            $mcc = "625";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "625.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15121,6 +16737,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "STP";
+                            $organisation = "STP";
+                            $network = "STP";
+                            $abbreviated_name = "STP";
+                            $mcc = "626";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "626.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15161,6 +16786,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "GNQ";
+                            $organisation = "GNQ";
+                            $network = "GNQ";
+                            $abbreviated_name = "GNQ";
+                            $mcc = "627";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "627.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15188,6 +16822,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "GAB";
+                            $organisation = "GAB";
+                            $network = "GAB";
+                            $abbreviated_name = "GAB";
+                            $mcc = "628";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "628.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15254,6 +16897,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "COG";
+                            $organisation = "COG";
+                            $network = "COG";
+                            $abbreviated_name = "COG";
+                            $mcc = "629";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "629.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15308,6 +16960,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "COD";
+                            $organisation = "COD";
+                            $network = "COD";
+                            $abbreviated_name = "COD";
+                            $mcc = "630";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "630.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15401,6 +17062,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "AGO";
+                            $organisation = "AGO";
+                            $network = "AGO";
+                            $abbreviated_name = "AGO";
+                            $mcc = "631";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "631.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15441,6 +17111,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "GNB";
+                            $organisation = "GNB";
+                            $network = "GNB";
+                            $abbreviated_name = "GNB";
+                            $mcc = "632";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "632.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15481,6 +17160,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "SYC";
+                            $organisation = "SYC";
+                            $network = "SYC";
+                            $abbreviated_name = "SYC";
+                            $mcc = "633";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "633.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15528,6 +17216,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "SDN";
+                            $organisation = "SDN";
+                            $network = "SDN";
+                            $abbreviated_name = "SDN";
+                            $mcc = "634";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "634.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15568,6 +17265,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "RWA";
+                            $organisation = "RWA";
+                            $network = "RWA";
+                            $abbreviated_name = "RWA";
+                            $mcc = "635";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "635.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -15621,6 +17327,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "ETH";
+                            $organisation = "ETH";
+                            $network = "ETH";
+                            $abbreviated_name = "ETH";
+                            $mcc = "636";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "636.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15648,6 +17363,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "SOM";
+                            $organisation = "SOM";
+                            $network = "SOM";
+                            $abbreviated_name = "SOM";
+                            $mcc = "637";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "637.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15728,6 +17452,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "DJI";
+                            $organisation = "DJI";
+                            $network = "DJI";
+                            $abbreviated_name = "DJI";
+                            $mcc = "638";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "638.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15755,6 +17488,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "KEN";
+                            $organisation = "KEN";
+                            $network = "KEN";
+                            $abbreviated_name = "KEN";
+                            $mcc = "639";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "639.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15815,6 +17557,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "TZA";
+                            $organisation = "TZA";
+                            $network = "TZA";
+                            $abbreviated_name = "TZA";
+                            $mcc = "640";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "640.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15881,6 +17632,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "UGA";
+                            $organisation = "UGA";
+                            $network = "UGA";
+                            $abbreviated_name = "UGA";
+                            $mcc = "641";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "641.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -15987,6 +17747,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "BDI";
+                            $organisation = "BDI";
+                            $network = "BDI";
+                            $abbreviated_name = "BDI";
+                            $mcc = "642";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "642.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16047,6 +17816,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "MOZ";
+                            $organisation = "MOZ";
+                            $network = "MOZ";
+                            $abbreviated_name = "MOZ";
+                            $mcc = "643";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "643.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16087,6 +17865,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "ZMB";
+                            $organisation = "ZMB";
+                            $network = "ZMB";
+                            $abbreviated_name = "ZMB";
+                            $mcc = "645";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "645.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16127,6 +17914,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "MDG";
+                            $organisation = "MDG";
+                            $network = "MDG";
+                            $abbreviated_name = "MDG";
+                            $mcc = "646";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "646.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16180,6 +17976,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '7':
                         {
+                            $country = "REU";
+                            $organisation = "REU";
+                            $network = "REU";
+                            $abbreviated_name = "REU";
+                            $mcc = "647";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "647.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16241,31 +18046,20 @@ function get_operator_from_imsi($imsi)
                                     }
                                     break;
                                 }
-                                case '1':
-                                {
-                                    switch($imsi[4])
-                                    {
-                                        case '0':
-                                        {
-                                            $country = "REU";
-                                            $organisation = "SFR Réunion";
-                                            $network = "SFR Réunion";
-                                            $abbreviated_name = "SFR Réunion";
-                                            $mcc = "647";
-                                            $mnc = "10";
-                                            $sim = "";
-                                            $last_update = "2018-12-27";
-                                            $operator_code = "647.10";
-                                            break;
-                                        }
-                                    }
-                                    break;
-                                }
                             }
                             break;
                         }
                         case '8':
                         {
+                            $country = "ZWE";
+                            $organisation = "ZWE";
+                            $network = "ZWE";
+                            $abbreviated_name = "ZWE";
+                            $mcc = "648";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "648.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16319,6 +18113,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "NAM";
+                            $organisation = "NAM";
+                            $network = "NAM";
+                            $abbreviated_name = "NAM";
+                            $mcc = "649";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "649.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16366,6 +18169,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "MWI";
+                            $organisation = "MWI";
+                            $network = "MWI";
+                            $abbreviated_name = "MWI";
+                            $mcc = "650";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "650.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16413,6 +18225,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '1':
                         {
+                            $country = "LSO";
+                            $organisation = "LSO";
+                            $network = "LSO";
+                            $abbreviated_name = "LSO";
+                            $mcc = "651";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "651.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16453,6 +18274,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "BWA";
+                            $organisation = "BWA";
+                            $network = "BWA";
+                            $abbreviated_name = "BWA";
+                            $mcc = "652";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "652.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16506,6 +18336,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '3':
                         {
+                            $country = "SWZ";
+                            $organisation = "SWZ";
+                            $network = "SWZ";
+                            $abbreviated_name = "SWZ";
+                            $mcc = "653";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "653.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -16533,6 +18372,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "COM";
+                            $organisation = "COM";
+                            $network = "COM";
+                            $abbreviated_name = "COM";
+                            $mcc = "654";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "654.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16573,6 +18421,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '5':
                         {
+                            $country = "ZAF";
+                            $organisation = "ZAF";
+                            $network = "ZAF";
+                            $abbreviated_name = "ZAF";
+                            $mcc = "655";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "655.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16644,6 +18501,19 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '7':
+                        {
+                            $country = "ERI";
+                            $organisation = "ERI";
+                            $network = "ERI";
+                            $abbreviated_name = "ERI";
+                            $mcc = "657";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "657.XX";
+                            break;
+                        }
                         case '8':
                         {
                             switch($imsi[3])
@@ -16673,6 +18543,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '9':
                         {
+                            $country = "SSD";
+                            $organisation = "SSD";
+                            $network = "SSD";
+                            $abbreviated_name = "SSD";
+                            $mcc = "659";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "659.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16740,6 +18619,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '2':
                         {
+                            $country = "BLZ";
+                            $organisation = "BLZ";
+                            $network = "BLZ";
+                            $abbreviated_name = "BLZ";
+                            $mcc = "702";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "702.XX";
                             switch($imsi[3])
                             {
                                 case '6':
@@ -16780,6 +18668,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "GTM";
+                            $organisation = "GTM";
+                            $network = "GTM";
+                            $abbreviated_name = "GTM";
+                            $mcc = "704";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "704.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16833,6 +18730,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "SLV";
+                            $organisation = "SLV";
+                            $network = "SLV";
+                            $abbreviated_name = "SLV";
+                            $mcc = "706";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "706.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16899,6 +18805,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "HND";
+                            $organisation = "HND";
+                            $network = "HND";
+                            $abbreviated_name = "HND";
+                            $mcc = "708";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "708.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -16973,6 +18888,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "NIC";
+                            $organisation = "NIC";
+                            $network = "NIC";
+                            $abbreviated_name = "NIC";
+                            $mcc = "710";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "710.XX";
                             switch($imsi[3])
                             {
                                 case '2':
@@ -17047,6 +18971,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "CRI";
+                            $organisation = "CRI";
+                            $network = "CRI";
+                            $abbreviated_name = "CRI";
+                            $mcc = "712";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "712.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -17113,6 +19046,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "PAN";
+                            $organisation = "PAN";
+                            $network = "PAN";
+                            $abbreviated_name = "PAN";
+                            $mcc = "714";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "714.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -17186,6 +19128,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "PER";
+                            $organisation = "PER";
+                            $network = "PER";
+                            $abbreviated_name = "PER";
+                            $mcc = "716";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "716.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -17266,6 +19217,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '2':
                         {
+                            $country = "ARG";
+                            $organisation = "ARG";
+                            $network = "ARG";
+                            $abbreviated_name = "ARG";
+                            $mcc = "722";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "722.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -17366,6 +19326,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "BRA";
+                            $organisation = "BRA";
+                            $network = "BRA";
+                            $abbreviated_name = "BRA";
+                            $mcc = "724";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "724.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -17616,6 +19585,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "CHL";
+                            $organisation = "CHL";
+                            $network = "CHL";
+                            $abbreviated_name = "CHL";
+                            $mcc = "730";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "730.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -17715,6 +19693,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '2':
                         {
+                            $country = "COL";
+                            $organisation = "COL";
+                            $network = "COL";
+                            $abbreviated_name = "COL";
+                            $mcc = "732";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "732.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -17842,6 +19829,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '4':
                         {
+                            $country = "VEN";
+                            $organisation = "VEN";
+                            $network = "VEN";
+                            $abbreviated_name = "VEN";
+                            $mcc = "734";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "734.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -17895,6 +19891,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "BOL";
+                            $organisation = "BOL";
+                            $network = "BOL";
+                            $abbreviated_name = "BOL";
+                            $mcc = "736";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "736.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -17948,6 +19953,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "GUY";
+                            $organisation = "GUY";
+                            $network = "GUY";
+                            $abbreviated_name = "GUY";
+                            $mcc = "738";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "738.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -18002,6 +20016,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "ECU";
+                            $organisation = "ECU";
+                            $network = "ECU";
+                            $abbreviated_name = "ECU";
+                            $mcc = "740";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "740.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -18053,8 +20076,30 @@ function get_operator_from_imsi($imsi)
                             }
                             break;
                         }
+                        case '2':
+                        {
+                            $country = "GUF";
+                            $organisation = "GUF";
+                            $network = "GUF";
+                            $abbreviated_name = "GUF";
+                            $mcc = "742";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "742.XX";
+                            break;
+                        }
                         case '4':
                         {
+                            $country = "PRY";
+                            $organisation = "PRY";
+                            $network = "PRY";
+                            $abbreviated_name = "PRY";
+                            $mcc = "744";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "744.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -18121,6 +20166,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '6':
                         {
+                            $country = "SUR";
+                            $organisation = "SUR";
+                            $network = "SUR";
+                            $abbreviated_name = "SUR";
+                            $mcc = "746";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "746.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -18161,6 +20215,15 @@ function get_operator_from_imsi($imsi)
                         }
                         case '8':
                         {
+                            $country = "URY";
+                            $organisation = "URY";
+                            $network = "URY";
+                            $abbreviated_name = "URY";
+                            $mcc = "748";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "748.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -18228,6 +20291,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '0':
                         {
+                            $country = "FLK";
+                            $organisation = "FLK";
+                            $network = "FLK";
+                            $abbreviated_name = "FLK";
+                            $mcc = "750";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "750.XX";
                             switch($imsi[3])
                             {
                                 case '0':
@@ -18276,6 +20348,15 @@ function get_operator_from_imsi($imsi)
                     {
                         case '1':
                         {
+                            $country = "AAQ";
+                            $organisation = "AAQ";
+                            $network = "AAQ";
+                            $abbreviated_name = "AAQ";
+                            $mcc = "901";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "901.XX";
                             switch($imsi[3])
                             {
                                 case '1':
@@ -18306,19 +20387,6 @@ function get_operator_from_imsi($imsi)
                                             $sim = "8988232";
                                             $last_update = "2016-03-16";
                                             $operator_code = "901.12";
-                                            break;
-                                        }
-                                        case '3':
-                                        {
-                                            $country = "AAQ";
-                                            $organisation = "BebbiCell";
-                                            $network = "BebbiCell";
-                                            $abbreviated_name = "BebbiCell";
-                                            $mcc = "901";
-                                            $mnc = "13";
-                                            $sim = "";
-                                            $last_update = "2018-12-27";
-                                            $operator_code = "901.13";
                                             break;
                                         }
                                         case '4':
@@ -18411,6 +20479,26 @@ function get_operator_from_imsi($imsi)
                                     break;
                                 }
                             }
+                            break;
+                        }
+                    }
+                    break;
+                }
+                case '9':
+                {
+                    switch($imsi[2])
+                    {
+                        case '3':
+                        {
+                            $country = "XXX";
+                            $organisation = "XXX";
+                            $network = "XXX";
+                            $abbreviated_name = "XXX";
+                            $mcc = "993";
+                            $mnc = "XX";
+                            $sim = "";
+                            $last_update = "";
+                            $operator_code = "993.XX";
                             break;
                         }
                     }

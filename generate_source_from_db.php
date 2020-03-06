@@ -66,6 +66,53 @@ function add_node(&$root,$prefix,$digit,$country,$organisation,$network,$abbrevi
 function print_node($root,$ident,$tab,$index,$format)
 {
 	$has_sub = 0;
+	
+	if($format=="c")
+	{
+		$varprefix = "*";
+	}
+	else if($format=="php")
+	{
+		$varprefix = "$";
+	}
+	
+	if(isset($root['country']))
+	{
+		echo $ident.$varprefix."country = \"".$root['country']."\";\n";
+	}
+	if(isset($root['organisation']))
+	{
+		echo $ident.$varprefix."organisation = \"".$root['organisation']."\";\n";
+	}
+	if(isset($root['network']))
+	{
+		echo $ident.$varprefix."network = \"".$root['network']."\";\n";
+	}
+	if(isset($root['abbreviated_name']))
+	{
+		echo $ident.$varprefix."abbreviated_name = \"".$root['abbreviated_name']."\";\n";
+	}
+	if(isset($root['mcc']))
+	{
+		echo $ident.$varprefix."mcc = \"".$root['mcc']."\";\n";
+	}
+	if(isset($root['mnc']))
+	{
+		echo $ident.$varprefix."mnc = \"".$root['mnc']."\";\n";
+	}
+	if(isset($root['sim']))
+	{
+		echo $ident.$varprefix."sim = \"".$root['sim']."\";\n";
+	}
+	if(isset($root['last_update']))
+	{
+		echo $ident.$varprefix."last_update = \"".$root['last_update']."\";\n";
+	}
+	if(isset($root['operator_code']))
+	{
+		echo $ident.$varprefix."operator_code = \"".$root['operator_code']."\";\n";
+	}
+	
 	for($i=0;$i<10;$i++)
 	{
 		if(isset($root[$i]))
@@ -99,58 +146,31 @@ function print_node($root,$ident,$tab,$index,$format)
 		}
 		echo $ident."}\n";
 	}
-	else
-	{
-		if($format=="c")
-		{
-			$varprefix = "*";
-		}
-		else if($format=="php")
-		{
-			$varprefix = "$";
-		}
-		
-		if(isset($root['country']))
-		{
-			echo $ident.$varprefix."country = \"".$root['country']."\";\n";
-		}
-		if(isset($root['organisation']))
-		{
-			echo $ident.$varprefix."organisation = \"".$root['organisation']."\";\n";
-		}
-		if(isset($root['network']))
-		{
-			echo $ident.$varprefix."network = \"".$root['network']."\";\n";
-		}
-		if(isset($root['abbreviated_name']))
-		{
-			echo $ident.$varprefix."abbreviated_name = \"".$root['abbreviated_name']."\";\n";
-		}
-		if(isset($root['mcc']))
-		{
-			echo $ident.$varprefix."mcc = \"".$root['mcc']."\";\n";
-		}
-		if(isset($root['mnc']))
-		{
-			echo $ident.$varprefix."mnc = \"".$root['mnc']."\";\n";
-		}
-		if(isset($root['sim']))
-		{
-			echo $ident.$varprefix."sim = \"".$root['sim']."\";\n";
-		}
-		if(isset($root['last_update']))
-		{
-			echo $ident.$varprefix."last_update = \"".$root['last_update']."\";\n";
-		}
-		if(isset($root['operator_code']))
-		{
-			echo $ident.$varprefix."operator_code = \"".$root['operator_code']."\";\n";
-		}
-	}
+	
+
+	
 }
 
 $root = array('prefix'=>'');
-$op_recs = get_rows_sql($mysqli1,"select * from ts25");
+
+$mcc_recs = get_rows_sql($mysqli1,"select * from country_mcc");
+$n = sizeof($mcc_recs);
+for($i=0;$i<$n;$i++)
+{
+	$r = $mcc_recs{$i};
+	$country = $r['country'];
+	$organisation = $country;
+	$network = $country;
+	$abbreviated_name = $country;
+	$mcc = $r['mcc'];
+	$mnc = "XX";
+	$sim = "";
+	$last_update = "";
+	$prefix = $mcc;
+	add_node($root,"",$prefix,$country,$organisation,$network,$abbreviated_name,$mcc,$mnc,$sim,$last_update);
+}
+
+$op_recs = get_rows_sql($mysqli1,"select * from operatordb");
 
 $n = sizeof($op_recs);
 for($i=0;$i<$n;$i++)
