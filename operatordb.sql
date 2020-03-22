@@ -11,7 +11,7 @@
  Target Server Version : 100129
  File Encoding         : 65001
 
- Date: 08/03/2020 13:05:11
+ Date: 22/03/2020 18:42:20
 */
 
 SET NAMES utf8mb4;
@@ -297,7 +297,7 @@ CREATE TABLE `operatordb` (
   `sim` varchar(32) NOT NULL,
   `last_update` varchar(32) NOT NULL,
   PRIMARY KEY (`dbid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2401 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2402 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of operatordb
@@ -2703,6 +2703,7 @@ INSERT INTO `operatordb` VALUES (2397, '', 'ZWE', 'Econet Wireless (Private) Lim
 INSERT INTO `operatordb` VALUES (2398, '', 'ZWE', 'Net*One Cellular (Pvt) Ltd', 'Net*One Cellular', 'ZW NET*ONE', 'NETONE', 'GSM 900', '648', '01', '', '8926301', '2016-03-16');
 INSERT INTO `operatordb` VALUES (2399, '', 'ZWE', 'Telecel Zimbabwe (PVT) Ltd', 'TELECEL', 'TELECEL ZW', 'TELECEL', 'GSM 900', '648', '03', '', '8926303', '2015-12-18');
 INSERT INTO `operatordb` VALUES (2400, '', 'GBR', 'Vectone Mobile	', 'Vectone Mobile	', 'Vectone Mobile	', 'Vectone', 'MVNO', '234', '01', '', '', '');
+INSERT INTO `operatordb` VALUES (2401, '', 'GBR', 'Lyca Mobile', 'Lyca Mobile', 'Lyca Mobile', 'Lyca Mobile', 'MVNO', '234', '26', '', '', '');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;

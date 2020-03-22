@@ -2,7 +2,7 @@
 //  operatordb.c
 //  operatordb
 //
-//  Created by afink on 2020-03-22 17:32:06 UTC.
+//  Created by afink on 2020-03-22 17:36:55 UTC.
 //
 
 
