@@ -2,7 +2,7 @@
 //  operatordb.php
 //  operatordb
 //
-//  Created by afink on 2020-03-06 21:12:30 UTC.
+//  Created by afink on 2020-03-22 17:37:24 UTC.
 //
 
 
@@ -1537,6 +1537,19 @@ function get_operator_from_imsi($imsi)
                                             $sim = "894420";
                                             $last_update = "2016-05-25";
                                             $operator_code = "234.20";
+                                            break;
+                                        }
+                                        case '6':
+                                        {
+                                            $country = "GBR";
+                                            $organisation = "Lyca Mobile";
+                                            $network = "Lyca Mobile";
+                                            $abbreviated_name = "Lyca Mobile";
+                                            $mcc = "234";
+                                            $mnc = "26";
+                                            $sim = "";
+                                            $last_update = "";
+                                            $operator_code = "234.26";
                                             break;
                                         }
                                         case '8':
