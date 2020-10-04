@@ -4,7 +4,7 @@ FRAMEWORK_DIR=/Library/Application\ Support/FinkTelecomServices/frameworks/opera
 
 
 install_name_tool -id  "${FRAMEWORK_DIR}/Versions/A/operatordb"  liboperatordb.dylib
-/usr/bin/codesign --force --sign 8FF801F4427AE4DFB624CC8D8D41EFD33E8A1BBD -o runtime --timestamp=none liboperatordb.dylib
+/usr/bin/codesign --force --sign 2GSNWPNR77 -o runtime --timestamp=none liboperatordb.dylib
 rm -rf "${FRAMEWORK_DIR}"
 mkdir -p "${FRAMEWORK_DIR}/Versions/A/Headers"
 mkdir -p "${FRAMEWORK_DIR}/Versions/A/Resources"
