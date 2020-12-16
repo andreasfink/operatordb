@@ -18,7 +18,7 @@ AC_SUBST(SHELL)
 AC_CONFIG_AUX_DIR(.)
 AC_SET_TERMINAL_SEQUENCES()
 
-COPYRIGHT="Copyright 2016 Andreas Fink"
+COPYRIGHT="Copyright 2020 Andreas Fink"
 PROJECT_NAME="operatordb"
 
 dnl Set user who runs ./configure
@@ -47,14 +47,17 @@ SHARED_LIB_EXTENSION=so
 	
 case "$host" in
   *apple-darwin*) 
-    SHARED_LIB_EXTENSION=dylib
+	SHARED_LIB_EXTENSION=dylib
+	XARCH="-arch x86_64 -arch arm64"
     ;;
 
 
 esac
 
-AC_SUBST(SHARED_LIB_EXTENSION)
+echo XARCH=$XARCH
 
+AC_SUBST(SHARED_LIB_EXTENSION)
+AC_SUBST(XARCH)
 AC_CONFIG_SECTION([Generating output files]) 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

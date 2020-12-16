@@ -8,6 +8,7 @@ PROJECT_NAME=operatordb
 PROJECT_ID=me.fink.operatordb
 
 SHARED_LIB_EXTENSION=@SHARED_LIB_EXTENSION@
+XARCH=@XARCH@
 PKGCONFIGFILE=operatordb.pc
 
 all: liboperatordb.a liboperatordb.@SHARED_LIB_EXTENSION@
@@ -20,10 +21,10 @@ liboperatordb.a: operatordb.o
 	ar rcs liboperatordb.a operatordb.o
 	
 liboperatordb.@SHARED_LIB_EXTENSION@: operatordb.o
-	${CC} -shared -o liboperatordb.@SHARED_LIB_EXTENSION@ ${LDFLAGS} operatordb.o
+	${CC} -shared -o liboperatordb.@SHARED_LIB_EXTENSION@ ${XARCH} ${LDFLAGS} operatordb.o
 
 operatordb.o: operatordb.c
-	${CC} -Os -fPIC -c ${CFLAGS}  $<  -o $@
+	${CC} -Os -fPIC -c ${CFLAGS}  ${XARCH} $<  -o $@
 
 clean:
 	rm -f liboperatordb.a liboperatordb.@SHARED_LIB_EXTENSION@ operatordb.o 
