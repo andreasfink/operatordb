@@ -12,7 +12,7 @@ dnl
 
 dnl initialization
 
-AC_PREREQ(2.13)
+AC_PREREQ([2.71])
 AC_INIT([operatordb],[1.0],[afink])
 AC_SUBST(SHELL)
 AC_CONFIG_AUX_DIR(.)
@@ -60,7 +60,20 @@ AC_SUBST(SHARED_LIB_EXTENSION)
 AC_SUBST(XARCH)
 AC_CONFIG_SECTION([Generating output files]) 
 AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([make_buildnr.sh])
 AC_OUTPUT
+
+chmod 755 make_buildnr.sh
+
+if [[ -f BUILDNR ]]
+then
+	echo "Buildnumber: `cat BUILDNR`"
+else
+	echo "1" > BUILDNR
+	echo "Buildnumber: 1"
+	./make_buildnr.sh
+fi
+
 
 dnl LICENSE notice
 AC_CONFIG_SECTION([License information])
