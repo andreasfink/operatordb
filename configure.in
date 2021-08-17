@@ -12,7 +12,7 @@ dnl
 
 dnl initialization
 
-AC_PREREQ([2.71])
+AC_PREREQ([2.69])
 AC_INIT([operatordb],[1.0],[afink])
 AC_SUBST(SHELL)
 AC_CONFIG_AUX_DIR(.)
