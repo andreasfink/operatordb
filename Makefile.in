@@ -19,9 +19,11 @@ static: liboperatordb.a
 
 liboperatordb.a: operatordb.o
 	ar rcs liboperatordb.a operatordb.o
-	
+	./codesign.sh liboperatordb.a
+
 liboperatordb.@SHARED_LIB_EXTENSION@: operatordb.o
 	${CC} -shared -o liboperatordb.@SHARED_LIB_EXTENSION@ ${XARCH} ${LDFLAGS} operatordb.o
+	./codesign.sh liboperatordb.@SHARED_LIB_EXTENSION@
 
 operatordb.o: operatordb.c
 	${CC} -Os -fPIC -c ${CFLAGS}  ${XARCH} $<  -o $@
