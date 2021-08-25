@@ -2,7 +2,7 @@
 //  operatordb.php
 //  operatordb
 //
-//  Created by afink on 2021-08-25 07:12:46 UTC.
+//  Created by afink on 2021-08-25 08:13:55 UTC.
 //
 
 
@@ -10776,7 +10776,7 @@ function get_operator_from_imsi2($imsi)
                                             $country = "BGR";
                                             $mcc = "284";
                                             $mnc = "07";
-                                            $mnc = "Bulgaria ???? (?????????? ???????? ??????????? ??????????????)";
+                                            $mnc = "Bulgaria National Railway Infrastructure Company";
                                             break;
                                         }
                                         case '9':
