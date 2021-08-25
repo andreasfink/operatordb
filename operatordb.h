@@ -10,14 +10,26 @@
 // the author.
 
 
+/*  this version is remaining for compatibility but should dissapear lateron */
 void get_operator_from_imsi(const char *imsi,
-                            char **country, /* this is a 3 character ISO code */
-                            char **organisation,
-                            char **network,
-                            char **abbreviated_name,
-                            char **mcc,
-                            char **mnc,
-                            char **sim,
-                            char **last_update,
-                            char **operator_code);
+                            const char **country, /* this is a 3 character ISO code */
+                            const char **organisation,
+                            const char **network,
+                            const char **abbreviated_name,
+                            const char **mcc,
+                            const char **mnc,
+                            const char **sim,
+                            const char **last_update,
+                            const char **operator_code);
 
+
+void get_operator_from_imsi2(const char *imsi,
+                            const char **operator_code,
+                            const char **cc2,
+                            const char **cc3,
+                            const char **country,
+                            const char **mcc,
+                            const char **mnc,
+                            const char **name);
+                            
+#define HAS_OPERATOR_FROM_IMSI2     1

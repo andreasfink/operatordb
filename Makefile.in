@@ -18,14 +18,17 @@ dynamic: liboperatordb.@SHARED_LIB_EXTENSION@
 static: liboperatordb.a
 
 liboperatordb.a: operatordb.o
-	ar rcs liboperatordb.a operatordb.o
+	ar rcs liboperatordb.a operatordb.o operatordb2.o
 	./codesign.sh liboperatordb.a
 
-liboperatordb.@SHARED_LIB_EXTENSION@: operatordb.o
-	${CC} -shared -o liboperatordb.@SHARED_LIB_EXTENSION@ ${XARCH} ${LDFLAGS} operatordb.o
+liboperatordb.@SHARED_LIB_EXTENSION@: operatordb.o operatordb2.o
+	${CC} -shared -o liboperatordb.@SHARED_LIB_EXTENSION@ ${XARCH} ${LDFLAGS} operatordb.o operatordb2.o
 	./codesign.sh liboperatordb.@SHARED_LIB_EXTENSION@
 
 operatordb.o: operatordb.c
+	${CC} -Os -fPIC -c ${CFLAGS}  ${XARCH} $<  -o $@
+
+operatordb2.o: operatordb2.c
 	${CC} -Os -fPIC -c ${CFLAGS}  ${XARCH} $<  -o $@
 
 clean:

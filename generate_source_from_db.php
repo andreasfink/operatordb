@@ -34,7 +34,7 @@ function get_rows_sql($handler,$sql,$xdebug=0)
 	return $arr;
 }
 
-function add_node(&$root,$prefix,$digit,$country,$organisation,$network,$abbreviated_name,$mcc,$mnc,$sim,$last_update)
+function add_node(&$root,$prefix,$digit,$cc2,$cc3,$country,$operator_code,$mcc,$mnc,$name)
 {
 	if(strlen($digit)> 0)
 	{
@@ -47,19 +47,20 @@ function add_node(&$root,$prefix,$digit,$country,$organisation,$network,$abbrevi
 			$root[$current_digit] = array('prefix'=>$prefix);
 		}
 		$root = &$root[$current_digit];
-		add_node($root,$prefix,$remaining_digits,$country,$organisation,$network,$abbreviated_name,$mcc,$mnc,$sim,$last_update);
+		add_node($root,$prefix,$remaining_digits,$cc2,$cc3,$country,$operator_code,$mcc,$mnc,$name);
 	}
 	else
 	{
+		$root['operator_code']=$operator_code;
+		$root['cc2']=$cc2;
+		$root['cc3']=$cc3;
 		$root['country']=$country;
-		$root['organisation']=$organisation;
-		$root['network']=$network;
-		$root['abbreviated_name']=$abbreviated_name;
 		$root['mcc']=$mcc;
 		$root['mnc']=$mnc;
-		$root['sim']=$sim;
-		$root['last_update']=$last_update;
-		$root['operator_code']=$mcc.".".$mnc;
+		$n = str_replace("\"","'",$name);
+		$n = str_replace("“","'",$n);
+		$n = str_replace("”","'",$n);
+		$root['name']=str_replace("\"","'",$n);
 	}
 }
 
@@ -69,28 +70,28 @@ function print_node($root,$ident,$tab,$index,$format)
 	
 	if($format=="c")
 	{
-		$varprefix = "*";
+		$varprefix = "x_";
 	}
 	else if($format=="php")
 	{
 		$varprefix = "$";
 	}
 	
+	if(isset($root['operator_code']))
+	{
+		echo $ident.$varprefix."operator_code = \"".$root['operator_code']."\";\n";
+	}
+	if(isset($root['cc2']))
+	{
+		echo $ident.$varprefix."cc2 = \"".$root['cc2']."\";\n";
+	}
+	if(isset($root['cc3']))
+	{
+		echo $ident.$varprefix."cc3 = \"".$root['cc3']."\";\n";
+	}
 	if(isset($root['country']))
 	{
 		echo $ident.$varprefix."country = \"".$root['country']."\";\n";
-	}
-	if(isset($root['organisation']))
-	{
-		echo $ident.$varprefix."organisation = \"".$root['organisation']."\";\n";
-	}
-	if(isset($root['network']))
-	{
-		echo $ident.$varprefix."network = \"".$root['network']."\";\n";
-	}
-	if(isset($root['abbreviated_name']))
-	{
-		echo $ident.$varprefix."abbreviated_name = \"".$root['abbreviated_name']."\";\n";
 	}
 	if(isset($root['mcc']))
 	{
@@ -100,19 +101,12 @@ function print_node($root,$ident,$tab,$index,$format)
 	{
 		echo $ident.$varprefix."mnc = \"".$root['mnc']."\";\n";
 	}
-	if(isset($root['sim']))
+
+	if(isset($root['name']))
 	{
-		echo $ident.$varprefix."sim = \"".$root['sim']."\";\n";
+		echo $ident.$varprefix."mnc = \"".$root['name']."\";\n";
 	}
-	if(isset($root['last_update']))
-	{
-		echo $ident.$varprefix."last_update = \"".$root['last_update']."\";\n";
-	}
-	if(isset($root['operator_code']))
-	{
-		echo $ident.$varprefix."operator_code = \"".$root['operator_code']."\";\n";
-	}
-	
+
 	for($i=0;$i<10;$i++)
 	{
 		if(isset($root[$i]))
@@ -146,9 +140,6 @@ function print_node($root,$ident,$tab,$index,$format)
 		}
 		echo $ident."}\n";
 	}
-	
-
-	
 }
 
 $root = array('prefix'=>'');
@@ -167,26 +158,26 @@ for($i=0;$i<$n;$i++)
 	$sim = "";
 	$last_update = "";
 	$prefix = $mcc;
-	add_node($root,"",$prefix,$country,$organisation,$network,$abbreviated_name,$mcc,$mnc,$sim,$last_update);
+	add_node($root,"",$prefix,$operator_code,$cc2,$cc3,$country,$mcc,$mnc,$name);
 }
 
-$op_recs = get_rows_sql($mysqli1,"select * from operatordb");
+$op_recs = get_rows_sql($mysqli1,"select * from opdb");
 
 $n = sizeof($op_recs);
 for($i=0;$i<$n;$i++)
 {
 	$r = $op_recs{$i};
-	$country = $r['cc3'];
-	$organisation = $r['organisation'];
-	$network = $r['network'];
-	$abbreviated_name = $r['abbreviated_name'];
+
+	$operator_code = $r['operator_code'];
+	$cc2 = $r['cc2'];
+	$cc3 = $r['cc3'];
+	$country = $r['country'];
 	$mcc = $r['mcc'];
 	$mnc = $r['mnc'];
-	$sim = $r['sim'];
-	$last_update = $r['last_update'];
+	$name = $r['name'];
 
 	$prefix = $mcc . $mnc;
-	add_node($root,"",$prefix,$country,$organisation,$network,$abbreviated_name,$mcc,$mnc,$sim,$last_update);
+	add_node($root,"",$prefix,$operator_code,$cc2,$cc3,$country,$mcc,$mnc,$name);
 }
 
 $output_format = "c";
@@ -205,33 +196,59 @@ if($output_format=="c")
 	echo "//\n";
 	echo "\n";
 	echo "\n";
-	echo "void get_operator_from_imsi(const char *imsi,\n";
-	echo "                            char **country,\n";
-	echo "                            char **organisation,\n"; 
-	echo "                            char **network,\n"; 
-	echo "                            char **abbreviated_name,\n";
-	echo "                            char **mcc,\n";
-	echo "                            char **mnc,\n";
-	echo "                            char **sim,\n";
-	echo "                            char **last_update,\n";
-	echo "                            char **operator_code)\n";
+	echo "void get_operator_from_imsi2(const char *imsi,\n";
+	echo "                            const char **operator_code,\n";
+	echo "                            const char **cc2,\n"; 
+	echo "                            const char **cc3,\n"; 
+	echo "                            const char **country,\n";
+	echo "                            const char **mcc,\n";
+	echo "                            const char **mnc,\n";
+	echo "                            const char **name)\n";
 	echo "{\n";
-	echo "    *country = \"\";\n";
-	echo "    *organisation = \"\";\n";
-	echo "    *network = \"\";\n";
-	echo "    *abbreviated_name = \"\";\n";
-	echo "    *mcc = \"\";\n";
-	echo "    *mnc = \"\";\n";
-	echo "    *sim = \"\";\n";
-	echo "    *last_update = \"\";\n";
-	echo "    *operator_code = \"\";\n";
+	echo "    const char *x_operator_code = \"\";\n";
+	echo "    const char *x_cc2 = \"\";\n";
+	echo "    const char *x_cc3 = \"\";\n";
+	echo "    const char *x_country = \"\";\n";
+	echo "    const char *x_mcc = \"\";\n";
+	echo "    const char *x_mnc = \"\";\n";
+	echo "    const char *x_name = \"\";\n";
 	echo "\n";
 
 	$tab = "    ";
 	$ident = $tab;
 	print_node($root,$ident,$tab,0,"c");
+	echo "    if(*operator_code)\n";
+	echo "    {\n";
+	echo "        *operator_code = x_operator_code;\n";
+	echo "    }\n";
+	echo "    if(*cc2)\n";
+	echo "    {\n";
+	echo "        *cc2 = x_cc2;\n";
+	echo "    }\n";
+	echo "    if(*operator_code)\n";
+	echo "    {\n";
+	echo "        *cc3 = x_cc3;\n";
+	echo "    }\n";
+	echo "    if(*country)\n";
+	echo "    {\n";
+	echo "        *country = x_country;\n";
+	echo "    }\n";
+	echo "    if(*mcc)\n";
+	echo "    {\n";
+	echo "        *mcc = x_mcc;\n";
+	echo "    }\n";
+	echo "    if(*mnc)\n";
+	echo "    {\n";
+	echo "        *mnc = x_mnc;\n";
+	echo "    }\n";
+	echo "    if(*name)\n";
+	echo "    {\n";
+	echo "        *name = x_name;\n";
+	echo "    }\n";
+	echo "\n";
 	echo "}\n";
 }
+
 else if ($output_format=="php")
 {
 	echo "<?php\n";
@@ -242,32 +259,28 @@ else if ($output_format=="php")
 	echo "//\n";
 	echo "\n";
 	echo "\n";
-	echo "function get_operator_from_imsi(\$imsi)\n";
+	echo "function get_operator_from_imsi2(\$imsi)\n";
 	echo "{\n";
+	echo "    \$operator_code = \"\";\n";
+	echo "    \$cc2 = \"\";\n";
+	echo "    \$cc3 = \"\";\n";
 	echo "    \$country = \"\";\n";
-	echo "    \$organisation = \"\";\n";
-	echo "    \$network = \"\";\n";
-	echo "    \$abbreviated_name = \"\";\n";
 	echo "    \$mcc = \"\";\n";
 	echo "    \$mnc = \"\";\n";
-	echo "    \$sim = \"\";\n";
-	echo "    \$last_update = \"\";\n";
-	echo "    \$operator_code = \"\";\n";
+	echo "    \$name = \"\";\n";
 	echo "\n";
 
 	$tab = "    ";
 	$ident = $tab;
 	print_node($root,$ident,$tab,0,"php");
 	echo "    \$a = array();\n";
-	echo "    \$a['country']= \$country;\n";
-	echo "    \$a['organisation']= \$organisation;\n";
-	echo "    \$a['network']= \$network;\n";
-	echo "    \$a['abbreviated_name']= \$abbreviated_name;\n";
+	echo "    \$a['operator_code']= \$operator_code;\n";
+	echo "    \$a['cc2']= \$cc2;\n";
+	echo "    \$a['cc3']= \$cc3;\n";
+	echo "    \$a['country']= \$name;\n";
 	echo "    \$a['mcc']= \$mcc;\n";
 	echo "    \$a['mnc']= \$mnc;\n";
-	echo "    \$a['sim']= \$sim;\n";
-	echo "    \$a['last_update']= \$last_update;\n";
-	echo "    \$a['operator_code']= \$operator_code;\n";
+	echo "    \$a['name']= \$name;\n";
 	echo "    return \$a;\n";
 	echo "}\n";
 }
