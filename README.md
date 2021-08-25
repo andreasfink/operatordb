@@ -22,7 +22,7 @@ For codesigning under Mac OS, define APPLICATION_CERT to your Developer ID certi
 
 if you want to modify the database and regenerate it, do the following:
 
-create a mysql database and import the opdb.sql database into it. Copy `dp.php-example` to `db.php` and edit it accordingly so php has access to that database
+create a mysql database and import the opdb.sql database into it. Copy `dp.php-example` to `db.php` and edit it accordingly so php has access to that database.
  
 then do
 
