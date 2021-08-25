@@ -22,16 +22,14 @@ For codesigning under Mac OS, define APPLICATION_CERT to your Developer ID certi
 
 if you want to modify the database and regenerate it, do the following:
 
-1. create a mysqldb and import the opdb.sql database in it
-2. copy dp.php-example to db.php and edit it accordingly
-3. type
-
-
+create a mysql database and import the opdb.sql database into it
+copy dp.php-example to db.php and edit it accordingly so php has access to that database
  
-	
+then do
+
 	make generate
 	make 
 	make install
-`
+
 	
 this will regenerate the operatordb.c out of the database and recompile it.
