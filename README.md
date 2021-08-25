@@ -25,9 +25,11 @@ if you want to modify the database and regenerate it, do the following:
 1. create a mysqldb and import the opdb.sql database in it
 2. copy dp.php-example to db.php and edit it accordingly
 3. type:
-    
+
+
 	make generate
-	make
 	make install
+
+
 
 this will regenerate the operatordb.c out of the database and recompile it.
