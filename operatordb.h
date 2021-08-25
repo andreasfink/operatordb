@@ -23,6 +23,8 @@ void get_operator_from_imsi(const char *imsi,
                             const char **operator_code);
 
 
+
+/*  this version allows passing NULL for all pointers to return data */
 void get_operator_from_imsi2(const char *imsi,
                             const char **operator_code,
                             const char **cc2,
