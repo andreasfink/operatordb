@@ -2,7 +2,7 @@
 //  operatordb.php
 //  operatordb
 //
-//  Created by afink on 2021-08-25 08:13:55 UTC.
+//  Created by afink on 2021-09-16 08:42:33 UTC.
 //
 
 
@@ -15,6 +15,18 @@ function get_operator_from_imsi2($imsi)
     $mcc = "";
     $mnc = "";
     $name = "";
+    $a = array();
+    $a['operator_code']= $operator_code;
+    $a['cc2']= $cc2;
+    $a['cc3']= $cc3;
+    $a['country']= $name;
+    $a['mcc']= $mcc;
+    $a['mnc']= $mnc;
+    $a['name']= $name;
+    if ( == NULL) || (strlen(==0))
+    {
+        return ;
+    }
 
     switch($imsi[0])
     {
@@ -40198,7 +40210,6 @@ function get_operator_from_imsi2($imsi)
             break;
         }
     }
-    $a = array();
     $a['operator_code']= $operator_code;
     $a['cc2']= $cc2;
     $a['cc3']= $cc3;

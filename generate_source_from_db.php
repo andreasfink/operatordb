@@ -195,6 +195,7 @@ if($output_format=="c")
 	echo "//  Created by ".get_current_user()." on ".gmdate('Y-m-d H:i:s e').".\n";
 	echo "//\n";
 	echo "\n";
+	echo "#include <string.h>\n";
 	echo "\n";
 	echo "void get_operator_from_imsi2(const char *imsi,\n";
 	echo "                            const char **operator_code,\n";
@@ -216,7 +217,7 @@ if($output_format=="c")
 	echo "    {\n";
 	echo "        return;\n";
 	echo "    }\n";
-	echo "    if (stlen(imsi) == 0)\n";
+	echo "    if (strlen(imsi) == 0)\n";
 	echo "    {\n";
 	echo "        return;\n";
 	echo "    }\n";

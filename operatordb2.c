@@ -2,9 +2,10 @@
 //  operatordb.c
 //  operatordb
 //
-//  Created by afink on 2021-08-25 08:13:49 UTC.
+//  Created by afink on 2021-09-16 08:42:33 UTC.
 //
 
+#include <string.h>
 
 void get_operator_from_imsi2(const char *imsi,
                             const char **operator_code,
@@ -22,6 +23,14 @@ void get_operator_from_imsi2(const char *imsi,
     const char *x_mcc = "";
     const char *x_mnc = "";
     const char *x_name = "";
+    if (imsi == 0)
+    {
+        return;
+    }
+    if (strlen(imsi) == 0)
+    {
+        return;
+    }
 
     switch(imsi[0])
     {
