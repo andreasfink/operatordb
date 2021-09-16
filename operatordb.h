@@ -34,4 +34,4 @@ void get_operator_from_imsi2(const char *imsi,
                             const char **mnc,
                             const char **name);
                             
-//#define HAS_OPERATOR_FROM_IMSI2     1
+#define HAS_OPERATOR_FROM_IMSI2     1
