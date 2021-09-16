@@ -212,6 +212,14 @@ if($output_format=="c")
 	echo "    const char *x_mcc = \"\";\n";
 	echo "    const char *x_mnc = \"\";\n";
 	echo "    const char *x_name = \"\";\n";
+	echo "    if (imsi == 0)\n";
+	echo "    {\n";
+	echo "        return;\n";
+	echo "    }\n";
+	echo "    if (stlen(imsi) == 0)\n";
+	echo "    {\n";
+	echo "        return;\n";
+	echo "    }\n";
 	echo "\n";
 
 	$tab = "    ";
@@ -268,12 +276,24 @@ else if ($output_format=="php")
 	echo "    \$mcc = \"\";\n";
 	echo "    \$mnc = \"\";\n";
 	echo "    \$name = \"\";\n";
+	
+	echo "    \$a = array();\n";
+	echo "    \$a['operator_code']= \$operator_code;\n";
+	echo "    \$a['cc2']= \$cc2;\n";
+	echo "    \$a['cc3']= \$cc3;\n";
+	echo "    \$a['country']= \$name;\n";
+	echo "    \$a['mcc']= \$mcc;\n";
+	echo "    \$a['mnc']= \$mnc;\n";
+	echo "    \$a['name']= \$name;\n";
+	echo "    if ($imsi == NULL) || (strlen($imsi==0))\n";
+	echo "    {\n";
+	echo "        return $a;\n";
+	echo "    }\n";
 	echo "\n";
 
 	$tab = "    ";
 	$ident = $tab;
 	print_node($root,$ident,$tab,0,"php");
-	echo "    \$a = array();\n";
 	echo "    \$a['operator_code']= \$operator_code;\n";
 	echo "    \$a['cc2']= \$cc2;\n";
 	echo "    \$a['cc3']= \$cc3;\n";
