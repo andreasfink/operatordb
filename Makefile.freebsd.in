@@ -1,0 +1,57 @@
+##
+# File: Makefile
+# Project "operatordb"
+# Copyright: © 2016 Andreas Fink (andreas@fink.org), Basel, Switzerland. All rights reserved.
+#
+
+PROJECT_NAME=operatordb
+PROJECT_ID=me.fink.operatordb
+
+SHARED_LIB_EXTENSION=dylib
+XARCH=-arch x86_64 -arch arm64
+PKGCONFIGFILE=operatordb.pc
+
+all: liboperatordb.a liboperatordb.dylib
+
+dynamic: liboperatordb.dylib
+
+static: liboperatordb.a
+
+liboperatordb.a: operatordb.o operatordb2.o
+	lipo operatordb.o   -extract arm64  -output operatordb.o.arm64
+	lipo operatordb2.o  -extract arm64  -output operatordb2.o.arm64
+	lipo operatordb.o   -extract x86_64 -output operatordb.o.x86_64
+	lipo operatordb2.o  -extract x86_64 -output operatordb2.o.x86_64
+	ar rcs liboperatordb.a.arm64   operatordb.o.arm64   operatordb2.o.arm64
+	ar rcs liboperatordb.a.x86_64  operatordb.o.x86_64  operatordb2.o.x86_64
+	lipo -create -arch x86_64 liboperatordb.a.x86_64  -arch arm64 liboperatordb.a.arm64 -output liboperatordb.a
+	./codesign.sh liboperatordb.a
+
+liboperatordb.dylib: operatordb.o operatordb2.o
+	${CC} -shared -o liboperatordb.dylib ${XARCH} ${LDFLAGS} operatordb.o operatordb2.o
+	./codesign.sh liboperatordb.dylib
+
+operatordb.o: operatordb.c
+	${CC} -Os -fPIC -c ${CFLAGS}  ${XARCH} $<  -o $@
+
+operatordb2.o: operatordb2.c
+	${CC} -Os -fPIC -c ${CFLAGS}  ${XARCH} $<  -o $@
+
+clean:
+	rm -f liboperatordb.a liboperatordb.dylib operatordb.o 
+
+install: liboperatordb.dylib liboperatordb.a
+	-mkdir -p ${DESTDIR}/usr/local/lib/pkgconfig
+	-mkdir -p ${DESTDIR}/usr/local/include/operatordb
+	cp liboperatordb.dylib ${DESTDIR}/usr/local/lib/
+	cp liboperatordb.a ${DESTDIR}/usr/local/lib/
+	cp operatordb.pc ${DESTDIR}/usr/local/lib/pkgconfig/
+	cp operatordb.h ${DESTDIR}/usr/local/include/operatordb/
+
+generate:
+	-mv operatordb2.c operatordb2.c.orig
+	php generate_source_from_db.php c    > operatordb2.c
+	php generate_source_from_db.php php  > operatordb2.php
+
+framework: liboperatordb.dylib operatordb.h VERSION Info.plist
+	./make_framework.sh
