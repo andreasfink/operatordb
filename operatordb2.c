@@ -2,7 +2,7 @@
 //  operatordb.c
 //  operatordb
 //
-//  Created by afink on 2021-10-05 23:31:47 UTC.
+//  Created by afink on 2021-10-05 23:40:26 UTC.
 //
 
 #include <string.h>
