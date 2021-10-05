@@ -101,10 +101,9 @@ function print_node($root,$ident,$tab,$index,$format)
 	{
 		echo $ident.$varprefix."mnc = \"".$root['mnc']."\";\n";
 	}
-
 	if(isset($root['name']))
 	{
-		echo $ident.$varprefix."mnc = \"".$root['name']."\";\n";
+		echo $ident.$varprefix."name = \"".$root['name']."\";\n";
 	}
 
 	for($i=0;$i<10;$i++)
@@ -148,7 +147,7 @@ $mcc_recs = get_rows_sql($mysqli1,"select * from country_mcc");
 $n = sizeof($mcc_recs);
 for($i=0;$i<$n;$i++)
 {
-	$r = $mcc_recs{$i};
+	$r = $mcc_recs[$i];
 	$country = $r['country'];
 	$organisation = $country;
 	$network = $country;
@@ -157,8 +156,13 @@ for($i=0;$i<$n;$i++)
 	$mnc = "XX";
 	$sim = "";
 	$last_update = "";
-	$prefix = $mcc;
-	add_node($root,"",$prefix,$operator_code,$cc2,$cc3,$country,$mcc,$mnc,$name);
+	$digit = $mcc;
+	$operator_code = $mcc.".".$mnc;
+	$cc2="";
+	$cc3="";
+	$name=$abbreviated_name;
+	//fprintf(STDERR,"	add_node(root,\"\",digit=$digit,cc2=$cc2,cc3=$cc3,country=$country,operator_code=$operator_code,mcc=$mcc,mnc=$mnc,name=$name);\n");
+	add_node($root,"",$digit,$cc2,$cc3,$country,$operator_code,$mcc,$mnc,$name);
 }
 
 $op_recs = get_rows_sql($mysqli1,"select * from opdb");
@@ -166,18 +170,23 @@ $op_recs = get_rows_sql($mysqli1,"select * from opdb");
 $n = sizeof($op_recs);
 for($i=0;$i<$n;$i++)
 {
-	$r = $op_recs{$i};
-
+	$r = $op_recs[$i];
 	$operator_code = $r['operator_code'];
 	$cc2 = $r['cc2'];
 	$cc3 = $r['cc3'];
-	$country = $r['country'];
+	if(isset($r['country']))
+	{
+		$country = $r['country'];
+	}
+	else
+	{
+		$country = "";
+	}
 	$mcc = $r['mcc'];
 	$mnc = $r['mnc'];
 	$name = $r['name'];
-
-	$prefix = $mcc . $mnc;
-	add_node($root,"",$prefix,$operator_code,$cc2,$cc3,$country,$mcc,$mnc,$name);
+	$digit = $mcc . $mnc;
+    add_node($root,"",$digit,$cc2,$cc3,$country,$operator_code,$mcc,$mnc,$name);
 }
 
 $output_format = "c";
@@ -206,6 +215,34 @@ if($output_format=="c")
 	echo "                            const char **mnc,\n";
 	echo "                            const char **name)\n";
 	echo "{\n";
+	echo "    if(operator_code)\n";
+	echo "    {\n";
+	echo "        *operator_code=\"\";\n";
+	echo "    }\n";
+	echo "    if(cc2)\n";
+	echo "    {\n";
+	echo "        *cc2=\"\";\n";
+	echo "    }\n";
+	echo "    if(cc3)\n";
+	echo "    {\n";
+	echo "        *cc3=\"\";\n";
+	echo "    }\n";
+	echo "    if(country)\n";
+	echo "    {\n";
+	echo "        *country=\"\";\n";
+	echo "    }\n";
+	echo "    if(mcc)\n";
+	echo "    {\n";
+	echo "        *mcc=\"\";\n";
+	echo "    }\n";
+	echo "    if(mnc)\n";
+	echo "    {\n";
+	echo "        *mnc=\"\";\n";
+	echo "    }\n";
+	echo "    if(name)\n";
+	echo "    {\n";
+	echo "        *name=\"\";\n";
+	echo "    }\n";
 	echo "    const char *x_operator_code = \"\";\n";
 	echo "    const char *x_cc2 = \"\";\n";
 	echo "    const char *x_cc3 = \"\";\n";
@@ -226,31 +263,31 @@ if($output_format=="c")
 	$tab = "    ";
 	$ident = $tab;
 	print_node($root,$ident,$tab,0,"c");
-	echo "    if(*operator_code)\n";
+	echo "    if(operator_code)\n";
 	echo "    {\n";
 	echo "        *operator_code = x_operator_code;\n";
 	echo "    }\n";
-	echo "    if(*cc2)\n";
+	echo "    if(cc2)\n";
 	echo "    {\n";
 	echo "        *cc2 = x_cc2;\n";
 	echo "    }\n";
-	echo "    if(*operator_code)\n";
+	echo "    if(cc3)\n";
 	echo "    {\n";
 	echo "        *cc3 = x_cc3;\n";
 	echo "    }\n";
-	echo "    if(*country)\n";
+	echo "    if(country)\n";
 	echo "    {\n";
 	echo "        *country = x_country;\n";
 	echo "    }\n";
-	echo "    if(*mcc)\n";
+	echo "    if(mcc)\n";
 	echo "    {\n";
 	echo "        *mcc = x_mcc;\n";
 	echo "    }\n";
-	echo "    if(*mnc)\n";
+	echo "    if(mnc)\n";
 	echo "    {\n";
 	echo "        *mnc = x_mnc;\n";
 	echo "    }\n";
-	echo "    if(*name)\n";
+	echo "    if(name)\n";
 	echo "    {\n";
 	echo "        *name = x_name;\n";
 	echo "    }\n";
@@ -286,9 +323,9 @@ else if ($output_format=="php")
 	echo "    \$a['mcc']= \$mcc;\n";
 	echo "    \$a['mnc']= \$mnc;\n";
 	echo "    \$a['name']= \$name;\n";
-	echo "    if ($imsi == NULL) || (strlen($imsi==0))\n";
+	echo "    if (\$imsi == NULL) || (strlen(\$imsi==0))\n";
 	echo "    {\n";
-	echo "        return $a;\n";
+	echo "        return \$a;\n";
 	echo "    }\n";
 	echo "\n";
 
