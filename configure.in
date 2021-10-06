@@ -59,9 +59,23 @@ echo XARCH=$XARCH
 AC_SUBST(SHARED_LIB_EXTENSION)
 AC_SUBST(XARCH)
 AC_CONFIG_SECTION([Generating output files]) 
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile.linux])
+AC_CONFIG_FILES([Makefile.osx])
+AC_CONFIG_FILES([Makefile.freebsd])
 AC_CONFIG_FILES([make_buildnr.sh])
 AC_OUTPUT
+
+case "$host" in
+  *apple-darwin*)
+    cp Makefile.osx Makefile
+    ;;
+  *-linux-*)
+    cp Makefile.linux Makefile
+    ;;
+  *-freebsd*)
+    cp Makefile.freebsd Makefile
+    ;;
+esac
 
 chmod 755 make_buildnr.sh
 
