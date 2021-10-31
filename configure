@@ -585,6 +585,15 @@ PACKAGE_URL=''
 
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
+USER_LIBS
+UBUNTU_LIBS
+SHARED_LIBRARY_EXTENSION
+STATIC_LIBS
+REVISION
+MINORVER
+MAJORVER
+VERSION
+PROJECT_NAME
 XARCH
 SHARED_LIB_EXTENSION
 host_os
@@ -1850,17 +1859,27 @@ echo XARCH=$XARCH
 
 
 
+
+
+
+
+
+
+
+
+
+
   nl='
 '
   echo "${nl}${T_MD}Generating output files ...${T_ME}"
+
+ac_config_files="$ac_config_files make_buildnr.sh"
 
 ac_config_files="$ac_config_files Makefile.linux"
 
 ac_config_files="$ac_config_files Makefile.osx"
 
 ac_config_files="$ac_config_files Makefile.freebsd"
-
-ac_config_files="$ac_config_files make_buildnr.sh"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -2567,10 +2586,10 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_write_fail=1
 for ac_config_target in $ac_config_targets
 do
   case $ac_config_target in
+    "make_buildnr.sh") CONFIG_FILES="$CONFIG_FILES make_buildnr.sh" ;;
     "Makefile.linux") CONFIG_FILES="$CONFIG_FILES Makefile.linux" ;;
     "Makefile.osx") CONFIG_FILES="$CONFIG_FILES Makefile.osx" ;;
     "Makefile.freebsd") CONFIG_FILES="$CONFIG_FILES Makefile.freebsd" ;;
-    "make_buildnr.sh") CONFIG_FILES="$CONFIG_FILES make_buildnr.sh" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
