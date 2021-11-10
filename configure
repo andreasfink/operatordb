@@ -1849,6 +1849,8 @@ case "$host" in
   *apple-darwin*)
 	SHARED_LIB_EXTENSION=dylib
 	XARCH="-arch x86_64 -arch arm64"
+	LDFLAGS="$LDFLAGS -g"
+	CFLAGS="$CFLAGS -g"
     ;;
 
 
