@@ -4,6 +4,16 @@ make_buildnr.sh
 buildnumber.c
 buildnumber.h
 
+Makefile
+Makefile.freebsd
+Makefile.linux
+Makefile.osx
+config.log
+config.status
+liboperatordb.a.arm64
+operatordb.o.arm64
+operatordb2.o.arm64
+
 db.php
 
 *.o
